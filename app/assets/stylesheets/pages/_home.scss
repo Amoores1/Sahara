@@ -1,1 +1,25 @@
 // Specific CSS for your home-page
+
+
+#home-image {
+  background-image: url(https://media.istockphoto.com/vectors/seamless-background-with-books-vector-id929023224?k=20&m=929023224&s=612x612&w=0&h=4f5RDaGRYq8Ba9KfnpWjzyBx_0yKfwL24zIqMtb_GoI=);
+  height: 70vh;
+}
+
+.nav-item-home2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  // flex-direction: column;
+}
+.book-search-home {
+  width: 500px;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.btn-outline-warning{
+  color: brown;
+  border-color: black;
+}
