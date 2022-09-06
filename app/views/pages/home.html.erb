@@ -1,6 +1,6 @@
 <div id="home-image">
    <div class="nav-item-home2">
-      <%= form_with url: root_path, method: :get, class: "book-search-home input-group" do %>
+      <%= form_with url: books_path , method: :get, class: "book-search-home input-group" do %>
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
