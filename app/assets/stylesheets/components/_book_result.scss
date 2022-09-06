@@ -1,5 +1,6 @@
 .index-wrapper{
   display: flex;
+  padding: 10px 0 10px 0;
 }
 
 .list-container {
@@ -16,6 +17,7 @@
   background-color: rgb(200, 200, 200);
   align-items: center;
   border-radius: 10px;
+  margin: 5px 0;
 }
 
 
@@ -49,6 +51,12 @@
   display: flex;
   flex-direction: column;
   background-color: rgb(200, 200, 200);
+  position: sticky;
+  right: 0;
+  overflow-y: scroll;
+  height: 94vh;
+  top: 20px;
+  bottom :20px;
 }
 
 .filter-options {

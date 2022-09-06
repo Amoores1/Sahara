@@ -1,59 +1,9 @@
 <div class="index-wrapper">
   <div class="list-container">
-  <h3>results</h3>
+  <h3>Results</h3>
     <% @books.each do |book| %>
       <%= render partial: '/books/book_result', locals: {book: book} %>
     <% end %>
-
-    <%# sample %>
-  <div class="book-container">
-    <div class="book-image-group">
-      <img class="book-image" src="https://149352626.v2.pressablecdn.com/wp-content/uploads/2018/02/CK-3-684x1024.jpg" alt="placeholder" >
-    </div>
-    <div class="info-and-price">
-      <div class="book-info-group-left">
-        <p><%= %>Title</p>
-        <p>Author</p>
-        <p>Genre</p>
-        <p>Year</p>
-        <p>Condition</p>
-      </div>
-      <div class="book-info-group-right">
-        <h4>£8.99</h4>
-      </div>
-    </div>
   </div>
-    <%# to be deleted %>
-  </div>
-
-  <div class="book-filters">
-    <div class="filter-options">
-      <h4>Filter by</h4>
-      <h5>Genre</h5>
-        <div class="sub-option-container">
-          <p>Classic</p>
-          <p>Adventure</p>
-          <p>Science Fiction</p>
-          <p>Fantasy</p>
-          <p>Non-fiction</p>
-          <p>Fiction</p>
-          <p>Childrens</p>
-        </div>
-      <h5>Year</h5>
-        <div class="sub-option-container">
-          <div class="slidecontainer">
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-          </div>
-        </div>
-      <h5>Condition</h5>
-        <div class="sub-option-container">
-          <p>Mint</p>
-          <p>Near Mint</p>
-          <p>Very good</p>
-          <p>Good</p>
-          <p>Poor</p>
-        </div>
-    </div>
-  </div>
-
+  <%= render partial: '/books/results_filters' %>
 </div>
