@@ -1,0 +1,61 @@
+.index-wrapper{
+  display: flex;
+}
+
+.list-container {
+  display:flex;
+  flex-direction: column;
+  width: 60vw;
+  margin: 0 50px;
+}
+
+.book-container{
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(200, 200, 200);
+  align-items: center;
+  border-radius: 10px;
+}
+
+
+.book-image {
+  width: 150px;
+  padding-left: 10px;
+}
+
+.info-and-price {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.book-info-group-left {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.book-info-group-right {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+
+.book-filters {
+  width: 25vw;
+  margin: 0 50px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(200, 200, 200);
+}
+
+.filter-options {
+  margin-left: 20px;
+  padding: 20px;
+}
+
+.sub-option-container {
+  margin-left: 10px;
+}
