@@ -6,18 +6,21 @@
 
 
 
+  <% if current_page?(root_path) %>
 
-    <div class="nav-item">
-      <%= form_with url: root_path, method: :get, class: "rounded d-flex input-group" do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          id: "search-bar",
-          placeholder: "Harry Potter, Game of Thrones"
-        %>
-        <%= submit_tag "Search for a book", class: "btn btn-outline-warning", id:"button-search" %>
-        <% end %>
-    </div>
+    <% else  %>
+      <div class="nav-item">
+        <%= form_with url: root_path, method: :get, class: "rounded d-flex input-group" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            id: "search-bar",
+            placeholder: "Harry Potter, Game of Thrones"
+          %>
+          <%= submit_tag "Search for a book", class: "btn btn-outline-warning", id:"button-search" %>
+          <% end %>
+      </div>
+    <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
