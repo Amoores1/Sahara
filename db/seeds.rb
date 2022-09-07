@@ -139,3 +139,4 @@ puts "generated physical book"
 physical_book6 = PhysicalBook.new(price: 21, available: "yes", book: book6, bookstore: bookstore4)
 physical_book6.save!
 puts "generated physical book"
+

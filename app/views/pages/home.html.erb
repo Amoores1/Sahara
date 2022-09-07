@@ -1,2 +1,13 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div id="home-image">
+   <div class="nav-item-home2">
+      <%= form_with url: books_path , method: :get, class: "book-search-home input-group" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          id: "search-bar-home",
+          placeholder: "Harry Potter, Game of Thrones"
+        %>
+        <%= submit_tag "Search for a book", class: "btn btn-outline-warning", id:"button-search" %>
+        <% end %>
+    </div>
+</div>
