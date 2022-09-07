@@ -1,0 +1,10 @@
+<h1> BOOKSTORE INDEX </h1>
+
+
+ <% @bookstores.each do |bookstore| %>
+      <%= bookstore.name %>
+      <%= bookstore.address %>
+      <%= bookstore.user.email %>
+      <%= link_to "See books at this store", bookstore_physical_books_path(bookstore) %>
+      <br>
+    <% end %>

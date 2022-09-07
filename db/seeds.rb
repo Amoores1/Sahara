@@ -78,3 +78,51 @@ puts "Generated book"
 book20 = Book.new(title: "Adventures of Huckleberry Finn", author: "Mark Twain", year: "1884", genre: "Fiction", condition: "Used")
 book20.save!
 puts "Generated book"
+
+
+user1 = User.new(email: "wow121212@email.com", password: "password123123")
+user1.save!
+puts "generated user"
+
+user2 = User.new(email: "amazing@email.com", password: "password123123")
+user2.save!
+puts "generated user"
+
+user3 = User.new(email: "superb@email.com", password: "password123123")
+user3.save!
+puts "generated user"
+
+bookstore1 = Bookstore.new(address: "123 ST", name: "Waterstones", user: user1)
+bookstore1.save!
+puts "generated bookstore"
+
+
+bookstore2 = Bookstore.new(address: "London Way", name: "Bookshop of London", user: user2)
+bookstore2.save!
+puts "generated bookstore"
+
+
+bookstore3 = Bookstore.new(address: "The Pentagon", name: "USA bookshop", user: user3)
+bookstore3.save!
+puts "generated bookstore"
+
+
+physical_book1 = PhysicalBook.new(price: 10, available: "yes", book: book20, bookstore: bookstore1)
+physical_book1.save!
+puts "generated physical book"
+
+physical_book2 = PhysicalBook.new(price: 9, available: "yes", book: book20, bookstore: bookstore2)
+physical_book2.save!
+puts "generated physical book"
+
+physical_book3 = PhysicalBook.new(price: 12, available: "yes", book: book20, bookstore: bookstore3)
+physical_book3.save!
+puts "generated physical book"
+
+physical_book4 = PhysicalBook.new(price: 20, available: "yes", book: book5, bookstore: bookstore2)
+physical_book4.save!
+puts "generated physical book"
+
+physical_book5 = PhysicalBook.new(price: 22, available: "yes", book: book5, bookstore: bookstore3)
+physical_book5.save!
+puts "generated physical book"

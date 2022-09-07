@@ -1,0 +1,23 @@
+
+<h1> Physical books for <%= @physical_books.bookstore.name %> </h1>
+<div>
+
+
+
+<% array = [] %>
+ <% @physical_books.each do |physical_book| %>
+      <strong> <%= physical_book.bookstore.name %> </strong>
+      <br>
+      <%= physical_book.book.title %>
+      <br>
+      £<%= physical_book.price %>
+      <br>
+      <%= physical_book.bookstore.user.email %>
+
+      <% array << physical_book.book_id%>
+      <%= array.count %>
+      <br>
+      <br>
+      <br>
+    <% end %>
+</div>
