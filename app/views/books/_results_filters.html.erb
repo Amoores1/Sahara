@@ -1,29 +1,53 @@
-<div class="book-filters">
-    <div class="filter-options">
+<div class="book-filters" data-controller="potato" >
+  <div class="filter-options">
+    <div class="filter-headers">
       <h4>Filter by</h4>
+      <p><%= link_to "Reset", books_path %></p>
+    </div>
+    <hr>
+
+    <div class="filter-title" data-action="click->potato#revealGenres">
+      <i class="fa-solid fa-caret-right" data-potato-target="genrecaret"></i>
       <h5>Genre</h5>
-        <div class="sub-option-container">
-          <p>Classic</p>
-          <p>Adventure</p>
-          <p>Science Fiction</p>
-          <p>Fantasy</p>
-          <p>Non-fiction</p>
-          <p>Fiction</p>
-          <p>Childrens</p>
-        </div>
-      <h5>Year</h5>
-        <div class="sub-option-container">
-          <div class="slidecontainer">
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-          </div>
-        </div>
-      <h5>Condition</h5>
-        <div class="sub-option-container">
-          <p>Mint</p>
-          <p>Near Mint</p>
-          <p>Very good</p>
-          <p>Good</p>
-          <p>Poor</p>
-        </div>
+    </div>
+    <div class="sub-option-container d-none" data-potato-target="genres">
+      <p><%= link_to "Adventure", books_path(genre: "adventure") %></p>
+      <p><%= link_to "Childrens", books_path(genre: "childrens") %></p>
+      <p><%= link_to "Classic", books_path(genre: "classic") %></p>
+      <p><%= link_to "Crime", books_path(genre: "crime") %></p>
+      <p><%= link_to "Fantasy", books_path(genre: "fantasy") %></p>
+      <p><%= link_to "Fiction", books_path(genre: "fiction") %></p>
+      <p><%= link_to "Horror", books_path(genre: "horror") %></p>
+      <p><%= link_to "Non-fiction", books_path(genre: "non-fiction") %></p>
+      <p><%= link_to "Science Fiction", books_path(genre: "science fiction") %></p>
+    </div>
+  <hr>
+
+  <div class="filter-title" data-action="click->potato#revealYear">
+    <i class="fa-solid fa-caret-right" data-potato-target="yearcaret"></i>
+    <h5>Year</h5>
+  </div>
+  <div data-potato-target="year" class="sub-option-container d-none">
+    <form action="/books" id ="year-container">
+      <p>From: </p>
+      <input name="from" type="number" min="-400" max="2022" step="1" value="1850"/>
+      <p> to </p>
+      <input name="to" type="number" min="1900" max="2022" step="1" value="1914"/>
+      <input type="submit" value="Go">
+    </form>
+  </div>
+  <hr>
+
+  <div class="filter-title" data-action="click->potato#revealCondition">
+    <i class="fa-solid fa-caret-right" data-potato-target="conditioncaret"></i>
+    <h5>Condition</h5>
+  </div>
+    <div class="sub-option-container d-none " data-potato-target="condition">
+      <p><%= link_to "Mint", books_path(condition: "mint") %></p>
+      <p><%= link_to "Near Mint", books_path(condition: "Near Mint") %></p>
+      <p><%= link_to "Very Good", books_path(condition: "Very Good") %></p>
+      <p><%= link_to "Good", books_path(condition: "Good") %></p>
+      <p><%= link_to "Poor", books_path(condition: "Poor") %></p>
     </div>
   </div>
+</div>

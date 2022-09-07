@@ -1,0 +1,42 @@
+.filter-title {
+  display:flex;
+  h5 {
+    margin: 0 0 0 5px !important;
+  }
+  i {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.filter-title:hover {
+  cursor:pointer;
+}
+
+.sub-option-container {
+  margin-top: 10px;
+  p {
+    a{
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+
+.filter-headers{
+  display:flex;
+  justify-content: space-between;
+  h4 {
+    margin: 0 !important;
+  }
+}
+
+
+#year-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  p {
+    margin: 0 !important;
+  }
+}
