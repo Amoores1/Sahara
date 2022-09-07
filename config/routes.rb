@@ -3,4 +3,9 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :books, only: [:index, :show]
+  resources :bookstores, only: [:index] do
+    resources :physical_books, only: [:index]
+  end
+
+  # resources :physical_books, only: [:index]
 end
