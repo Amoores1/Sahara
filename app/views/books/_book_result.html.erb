@@ -11,7 +11,7 @@
       <p>Condition: <%= book.condition %></p>
     </div>
     <div class="book-info-group-right">
-      <h4>£8.99</h4>
+      <%= link_to "See More", book_path(book.id), class:"btn btn-primary" %>
     </div>
   </div>
 </div>
