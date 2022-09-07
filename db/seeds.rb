@@ -111,8 +111,8 @@ bookstore3 = Bookstore.new(address: "187 Piccadilly, St. James's, London W1J 9LE
 bookstore3.save!
 puts "generated bookstore"
 
-bookstore3 = Bookstore.new(address: "10 Blacklands Terrace, London SW3 2SR, United Kingdom", name: "John Sandoe", user: user4)
-bookstore3.save!
+bookstore4 = Bookstore.new(address: "10 Blacklands Terrace, London SW3 2SR, United Kingdom", name: "John Sandoe", user: user4)
+bookstore4.save!
 puts "generated bookstore"
 
 
@@ -140,4 +140,6 @@ physical_book6 = PhysicalBook.new(price: 21, available: "yes", book: book6, book
 physical_book6.save!
 puts "generated physical book"
 
-
+physical_book7 = PhysicalBook.new(price: 22, available: "yes", book: book5, bookstore: bookstore3)
+physical_book7.save!
+puts "generated physical book"
