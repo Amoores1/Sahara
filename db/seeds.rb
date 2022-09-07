@@ -78,3 +78,66 @@ puts "Generated book"
 book20 = Book.new(title: "Adventures of Huckleberry Finn", author: "Mark Twain", year: "1884", genre: "Fiction", condition: "Used")
 book20.save!
 puts "Generated book"
+
+
+user1 = User.new(email: "wow121212@email.com", password: "password123123")
+user1.save!
+puts "generated user"
+
+user2 = User.new(email: "amazing@email.com", password: "password123123")
+user2.save!
+puts "generated user"
+
+user3 = User.new(email: "superb@email.com", password: "password123123")
+user3.save!
+puts "generated user"
+
+user4 = User.new(email: "sinestro@email.com", password: "password123123")
+user4.save!
+puts "generated user"
+
+bookstore1 = Bookstore.new(address: "439 Coldharbour Ln, London SW9 8LN, United Kingdom", name: "The Broadway Bookshop
+  ", user: user1)
+bookstore1.save!
+puts "generated bookstore"
+
+
+bookstore2 = Bookstore.new(address: "6 Broadway Market, London E8 4QJ, United Kingdom", name: "The Broadway Bookshop", user: user2)
+bookstore2.save!
+puts "generated bookstore"
+
+
+bookstore3 = Bookstore.new(address: "187 Piccadilly, St. James's, London W1J 9LE, United Kingdom", name: "Hatchards", user: user3)
+bookstore3.save!
+puts "generated bookstore"
+
+bookstore3 = Bookstore.new(address: "10 Blacklands Terrace, London SW3 2SR, United Kingdom", name: "John Sandoe", user: user4)
+bookstore3.save!
+puts "generated bookstore"
+
+
+physical_book1 = PhysicalBook.new(price: 10, available: "yes", book: book20, bookstore: bookstore1)
+physical_book1.save!
+puts "generated physical book"
+
+physical_book2 = PhysicalBook.new(price: 9, available: "yes", book: book20, bookstore: bookstore2)
+physical_book2.save!
+puts "generated physical book"
+
+physical_book3 = PhysicalBook.new(price: 12, available: "yes", book: book20, bookstore: bookstore3)
+physical_book3.save!
+puts "generated physical book"
+
+physical_book4 = PhysicalBook.new(price: 20, available: "yes", book: book5, bookstore: bookstore2)
+physical_book4.save!
+puts "generated physical book"
+
+physical_book5 = PhysicalBook.new(price: 22, available: "yes", book: book5, bookstore: bookstore3)
+physical_book5.save!
+puts "generated physical book"
+
+physical_book6 = PhysicalBook.new(price: 21, available: "yes", book: book6, bookstore: bookstore4)
+physical_book6.save!
+puts "generated physical book"
+
+

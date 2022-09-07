@@ -9,3 +9,7 @@ application.register("hello", HelloController)
 
 import PotatoController from "./potato_controller"
 application.register("potato", PotatoController)
+
+import MapController from "./map_controller"
+application.register("map", MapController)
+

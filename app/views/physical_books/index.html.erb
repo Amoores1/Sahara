@@ -1,0 +1,24 @@
+
+<h1> Physical books for <%= @bookstore.name %> </h1>
+
+<div>
+  <% @physical_books.group_by(&:book_id).each do |book_id, count| %>
+  <%# {1 => [book_1, book_2], 56 => [book_3, book_4]} %>
+  <% book = Book.find(book_id) %>
+    <br>
+    <%= book.title %>
+    <br>
+    <%# £<%= physical_book.price %>
+    <br>
+    <%# <%= physical_book.bookstore.user.email %>
+    <%= count.size %>
+
+    <br>
+    <br>
+    <br>
+    <% end %>
+
+  <% @physical_books.each do |physical_book| %>
+  <%= physical_book.price %>
+  <% end %>
+</div>
