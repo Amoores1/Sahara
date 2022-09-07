@@ -92,17 +92,26 @@ user3 = User.new(email: "superb@email.com", password: "password123123")
 user3.save!
 puts "generated user"
 
-bookstore1 = Bookstore.new(address: "123 ST", name: "Waterstones", user: user1)
+user4 = User.new(email: "sinestro@email.com", password: "password123123")
+user4.save!
+puts "generated user"
+
+bookstore1 = Bookstore.new(address: "439 Coldharbour Ln, London SW9 8LN, United Kingdom", name: "The Broadway Bookshop
+  ", user: user1)
 bookstore1.save!
 puts "generated bookstore"
 
 
-bookstore2 = Bookstore.new(address: "London Way", name: "Bookshop of London", user: user2)
+bookstore2 = Bookstore.new(address: "6 Broadway Market, London E8 4QJ, United Kingdom", name: "The Broadway Bookshop", user: user2)
 bookstore2.save!
 puts "generated bookstore"
 
 
-bookstore3 = Bookstore.new(address: "The Pentagon", name: "USA bookshop", user: user3)
+bookstore3 = Bookstore.new(address: "187 Piccadilly, St. James's, London W1J 9LE, United Kingdom", name: "Hatchards", user: user3)
+bookstore3.save!
+puts "generated bookstore"
+
+bookstore3 = Bookstore.new(address: "10 Blacklands Terrace, London SW3 2SR, United Kingdom", name: "John Sandoe", user: user4)
 bookstore3.save!
 puts "generated bookstore"
 
@@ -127,6 +136,8 @@ physical_book5 = PhysicalBook.new(price: 22, available: "yes", book: book5, book
 physical_book5.save!
 puts "generated physical book"
 
-physical_book6 = PhysicalBook.new(price: 22, available: "yes", book: book5, bookstore: bookstore3)
+physical_book6 = PhysicalBook.new(price: 21, available: "yes", book: book6, bookstore: bookstore4)
 physical_book6.save!
 puts "generated physical book"
+
+
