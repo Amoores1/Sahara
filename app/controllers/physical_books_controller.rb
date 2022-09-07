@@ -8,9 +8,4 @@ class PhysicalBooksController < ApplicationController
   end
 
 
-  private
-
-  def booking_params
-    params.require(:booking).permit(:total_price, :start_date, :end_date, :user_id, :car_id)
-  end
 end
