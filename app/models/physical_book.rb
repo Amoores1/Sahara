@@ -4,3 +4,7 @@ class PhysicalBook < ApplicationRecord
 
   has_many :basket_items, dependent: :destroy
 end
+
+# physical = PhysicalBook.first
+# physical.book
+# => returns the book object

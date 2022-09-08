@@ -1,18 +1,25 @@
-
 <h1> Bookstores that have this copy</h1>
+<%= link_to "Add #{physical_book.book.title} to cart", physical_book_basket_items_path(physical_book), method: :post %>
+<%= link_to "Remove item", basket_item_path(basket_item), method: :delete %>
 
+<% sum = [] %>
+<% @physical_books.each do |physical_book| %>
+  <% if physical_book.available == true %>
+    <% sum << physical_book  %>
+  <% end %>
+<% end %>
 
+<h3>There are <%= sum.size %> copies of <%= @book.title %> near you</h3>
 
+<% if @physical_books.exists? %>
+  <h2> Bookstores that have this copy</h2>
   <% @physical_books.each do |physical_book| %>
-  <li>
-    <%= physical_book.book.title %>
-    <%= physical_book.price %>
-    <%= physical_book.bookstore.name %>
-
-    <%= link_to "Add #{physical_book.book.title} to cart", physical_book_basket_items_path(physical_book), method: :post %>
-
-    <%= link_to "Remove item", basket_item_path(basket_item), method: :delete %>
+    <% if physical_book.available == true %>
+      <li>
+        <strong>£<%= physical_book.price %>,</strong>
+        <strong><%= physical_book.bookstore.name %></strong>
+        <%= physical_book.bookstore.address %>
+      </li>
     <% end %>
-
-
-  </li>
+  <% end %>
+<% end %>
