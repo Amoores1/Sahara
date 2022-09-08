@@ -7,5 +7,12 @@ class PhysicalBooksController < ApplicationController
     # @bookstores = Bookstore.where(physical_book: @physical_book)
   end
 
+  # def _physical
+  #   # @physical_books = PhysicalBook.all
+  #   @bookstore = Bookstore.find(params[:bookstore_id])
+  #   @physical_books = PhysicalBook.where(bookstore: @bookstore)
+  #   # @bookstores = Bookstore.where(physical_book: @physical_book)
+  # end
+
 
 end
