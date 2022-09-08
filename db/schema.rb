@@ -46,6 +46,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_07_101034) do
     t.index ["user_id"], name: "index_bookstores_on_user_id"
   end
 
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "orders", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.integer "total_price"
