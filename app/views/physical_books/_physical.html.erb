@@ -1,0 +1,12 @@
+
+<h1> Bookstores that have this copy</h1>
+
+
+
+  <% @physical_books.each do |physical_book| %>
+  <li>
+    <%= physical_book.book.title %>
+    <%= physical_book.price %>
+    <%= physical_book.bookstore.name %>
+    <% end %>
+  </li>
