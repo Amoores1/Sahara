@@ -20,7 +20,7 @@ export default class extends Controller {
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
       // go to bookstores_controller before uncommenting this line
-      // const popup = new mapboxgl.Popup().setHTML(marker.info_window)
+      // const popup = new mapboxgl.Popup().setHTML(marker.info_window_map)
       new mapboxgl.Marker()
         .setLngLat([ marker.lng, marker.lat ])
         // same that line 22
