@@ -4,12 +4,14 @@
 
 import { application } from "./application"
 
+import FilterDateController from "./filter_date_controller"
+application.register("filter-date", FilterDateController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
-
-import PotatoController from "./potato_controller"
-application.register("potato", PotatoController)
 
 import MapController from "./map_controller"
 application.register("map", MapController)
 
+import PotatoController from "./potato_controller"
+application.register("potato", PotatoController)
