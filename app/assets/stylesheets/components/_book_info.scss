@@ -1,40 +1,23 @@
-.index-wrapper2 {
+.one-more-wrapper{
   display: flex;
   padding: 10px 0 10px 0;
   background-color: #FCECDD;
+  width: 100vw;
 }
 
-.list-container2 {
-  display:flex;
-  flex-direction: column;
-  width: 60vw;
-  margin: 0 50px;
+.index-wrapper2 {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 100%;
+  display: flex;
 }
 
 .book-container2 {
   display: flex;
-  width: 150%;
-  height: 305px;
+  width: 50%;
   padding: 10px 0 10px 0;
   background-color: #FCFCFC;
-  align-items: flex-start;
-  margin: 5px 0;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   font-family: 'Lucida Sans'
 }
-
-.book-container3 {
-  display: flex;
-  width: 150%;
-  height: 300px;
-  padding: 10px 0 10px 0;
-  background-color: #FCFCFC;
-  align-items: flex-start;
-  margin: 5px 0;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  font-family: 'Lucida Sans'
-}
-
 
 .book-image2 {
   width: 200px;
@@ -52,7 +35,7 @@
   display: flex;
   flex-direction: column;
   padding: 0 20px;
-
+  justify-content: space-between;
 }
 
 .book-info-group-right2 {
@@ -80,4 +63,16 @@
 .info-btn-flat:hover {
   background: #FF6701;
   color: white;
+}
+
+.mapbox-map {
+  padding: 10px;
+  width: 50%;
+  position: relative;
+  background-color: #FCFCFC;
+}
+
+.map-itself {
+  width: 100%;
+  height:100%;
 }

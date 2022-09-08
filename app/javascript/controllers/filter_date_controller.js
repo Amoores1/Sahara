@@ -20,6 +20,7 @@ export default class extends Controller {
     }
 
     // Here I want to retain the previous entry value and assign it to the default value of input value
+    // would also like to keep filter option display open, may need to do in other controller.
     const fixedFrom = this.fromTarget.value
     const fixedTo = this.toTarget.value
     console.log(fixedFrom)
