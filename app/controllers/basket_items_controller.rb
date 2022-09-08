@@ -2,7 +2,7 @@ class BasketItemsController < ApplicationController
 
   def create
     # Find associated physical book and current cart
-    chosen_product = Physical_book.find(params[:physical_book_id])
+    chosen_product = PhysicalBook.find(params[:physical_book_id])
     current_cart = @current_cart
 
     # If cart already has this product then find the relevant basket_item and iterate quantity otherwise create a new basket_item for this physical_book

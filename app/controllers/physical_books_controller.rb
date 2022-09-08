@@ -8,34 +8,34 @@ class PhysicalBooksController < ApplicationController
   end
 
   def new
-    @physical_books = PhysicalBook.new
+    @physical_book = PhysicalBook.new
   end
 
   def create
-    @physical_books = PhysicalBook.create(physical_params)
+    @physical_book = PhysicalBook.create(physical_params)
     redirect_to physical_books_path
   end
 
   def edit
-    @physical_books = PhysicalBook.find(params[:id])
+    @physical_book = PhysicalBook.find(params[:id])
   end
 
   def update
-    @physical_books = PhysicalBook.find(params[:id])
-    @physical_books.update(physical_params)
+    @physical_book = PhysicalBook.find(params[:id])
+    @physical_book.update(physical_params)
     redirect_to physical_books_path
   end
 
   def destroy
-    @physical_books = PhysicalBook.find(params[:id])
-    @physical_books.destroy
+    @physical_book = PhysicalBook.find(params[:id])
+    @physical_book.destroy
     redirect_to physical_books_path
   end
 
 
   private
   def physical_params
-    params.require(:physical_books).permit(:name, :price)
+    params.require(:physical_book).permit(:book.title, :price)
   end
 
   # def _physical

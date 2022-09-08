@@ -5,10 +5,6 @@
     <li>Item: <%= basket_item.physical_book.name %>/ Price: <%= number_to_currency(basket_item.physical_book.price) %>/ Quantity: <%= basket_item.quantity %>/ Total Price: <%= number_to_currency(basket_item.sum_price) %>
     <ul>
       <li>
-        <%= link_to "Add (+1)", basket_item_add_path(:id => basket_item), method: :post %>
-        <%= link_to "Reduce (-1)", basket_item_reduce_path(:id => basket_item), method: :post %>
-      </li>
-      <li>
         <%= link_to "Remove item", basket_item_path(basket_item), method: :delete %>
       </li>
     </ul>
