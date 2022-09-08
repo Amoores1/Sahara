@@ -8,5 +8,11 @@
     <%= physical_book.book.title %>
     <%= physical_book.price %>
     <%= physical_book.bookstore.name %>
+
+    <%= button_to "Add #{physical_book.book.title} to cart", basket_items_path(:physical_books_id => physical_book.id) %>
+
+    <%= link_to "Remove item", basket_item_path(basket_item), method: :delete %>
     <% end %>
+
+
   </li>

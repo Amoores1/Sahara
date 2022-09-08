@@ -6,3 +6,5 @@
 </div>
 
 <%= render partial: '/physical_books/physical' %>
+
+<%= button_to "Add to cart", line_items_path(:product_id => product.id) %>
