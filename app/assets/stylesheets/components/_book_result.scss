@@ -23,7 +23,6 @@
 
 .book-image {
   width: 150px;
-  padding-left: 10px;
 }
 
 .info-and-price {
@@ -40,6 +39,7 @@
 
 .book-info-group-right {
   display: flex;
+  justify-content: flex-end;
   flex-direction: column;
   padding: 0 20px;
 }
@@ -66,4 +66,9 @@
 
 .sub-option-container {
   margin-left: 10px;
+}
+
+#plain-anchor {
+  text-decoration: inherit;
+  color: inherit;
 }

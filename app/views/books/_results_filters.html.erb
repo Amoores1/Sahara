@@ -33,9 +33,9 @@
   <div data-potato-target="year" class="sub-option-container d-none">
     <form action="<%= request.url %>" method="GET" id ="year-container" data-controller="filter-date" data-action="submit->filter-date#applyFilter">
       <p>From: </p>
-      <input data-filter-date-target="from" name="from" type="number" min="-400" max="2022" step="1" value="1850"/>
+      <input data-filter-date-target="from" name="from" type="number" min="-400" max="2022" step="1" value="<%= params[:from] ? params[:from] : 1850%>"/>
       <p> to </p>
-      <input data-filter-date-target="to" name="to" type="number" min="-400" max="2022" step="1" value="2000"/>
+      <input data-filter-date-target="to" name="to" type="number" min="-400" max="2022" step="1" value="<%= params[:to] ? params[:to] : 2000%>"/>
       <input type="submit" value="Go">
     </form>
   </div>

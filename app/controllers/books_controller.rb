@@ -14,7 +14,6 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
-    
     @markers = @book.bookstores.geocoded.map do |bookstore|
       {
         lat: bookstore.latitude,
@@ -26,8 +25,6 @@ class BooksController < ApplicationController
 
     @physical_books = PhysicalBook.where(book_id: @book.id)
     # @bookstores = Bookstore.all
-
-
     # @physical_books.each do |physical_book|
     #   @bookstores = Bookstore.where(bookstore_id: @physical_books.)
     # end
