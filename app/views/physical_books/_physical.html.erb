@@ -7,16 +7,19 @@
   <% end %>
 <h1>There are <%= sum.size %> copies of <%= @book.title %> near you</h1>
 
-
-<% if @physical_books.exists? %>
-  <h2> Bookstores that have this copy</h2>
-    <% @physical_books.each do |physical_book| %>
-      <% if physical_book.available == true %>
-        <li>
-          <strong>£<%= physical_book.price %>,</strong>
-          <strong><%= physical_book.bookstore.name %></strong>
-          <%= physical_book.bookstore.address %>
-          <% end %>
-        </li>
-      <% end %>
-<% end %>
+<div>
+  <% if @physical_books.exists? %>
+    <h2> Bookstores that have this copy</h2>
+      <% @physical_books.each do |physical_book| %>
+        <% if physical_book.available == true %>
+          <li>
+            <strong>£<%= physical_book.price %>,</strong>
+            <div data-action="click->bookstore-name#select">>
+              <span data-bookstore-name-target="bookstore"><strong><%= physical_book.bookstore.name %></strong> </span>
+            </div>
+            <%= physical_book.bookstore.address %>
+            <% end %>
+          </li>
+        <% end %>
+  <% end %>
+</div>

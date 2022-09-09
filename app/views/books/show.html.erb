@@ -1,7 +1,10 @@
-<div class="one-more-wrapper">
-  <div class="index-wrapper2">
-    <%= render partial: '/books/book_info' %>
-    <%= render partial: '/layouts/map' %>
+<div data-controller="bookstore-name">
+  <div class="one-more-wrapper">
+    <div class="index-wrapper2" >
+      <%= render partial: '/books/book_info' %>
+      <%= render partial: '/layouts/map' %>
+    </div>
   </div>
+
+  <%= render partial: '/physical_books/physical' %>
 </div>
-<%= render partial: '/physical_books/physical' %>

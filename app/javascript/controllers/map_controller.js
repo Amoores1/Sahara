@@ -7,6 +7,8 @@ export default class extends Controller {
     markers: Array
   }
 
+  // static targets = ["bookstore"]
+
   connect() {
     console.log("Connecting to data-controller")
     mapboxgl.accessToken = this.apiKeyValue
@@ -34,4 +36,8 @@ export default class extends Controller {
     this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
   }
+
+  // select() {
+  //   console.log("Hello")
+  // }
 }

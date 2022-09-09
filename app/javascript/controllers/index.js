@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import BookstoreNameController from "./bookstore_name_controller"
+application.register("bookstore-name", BookstoreNameController)
+
 import FilterDateController from "./filter_date_controller"
 application.register("filter-date", FilterDateController)
 

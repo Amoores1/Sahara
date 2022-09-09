@@ -1,6 +1,11 @@
 <div class="book-container">
   <div class="book-image-group">
-    <img class="book-image" src="https://149352626.v2.pressablecdn.com/wp-content/uploads/2018/02/CK-3-684x1024.jpg" alt="placeholder" >
+    <% if book.photo.valid? %>
+      <%= image_tag(book.photo, class: "book-image")%>
+    <% else%>
+      <img class="book-image" src="https://149352626.v2.pressablecdn.com/wp-content/uploads/2018/02/CK-3-684x1024.jpg" alt="book-image">
+    <%end%>
+    <%# <img class="book-image" src="https://149352626.v2.pressablecdn.com/wp-content/uploads/2018/02/CK-3-684x1024.jpg" alt="placeholder" > %>
   </div>
   <div class="info-and-price">
     <div class="book-info-group-left">

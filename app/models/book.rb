@@ -7,6 +7,7 @@ class Book < ApplicationRecord
     }
   has_many :physical_books
   has_many :bookstores, through: :physical_books
+  has_one_attached :photo
 end
 
 # book = Book.first

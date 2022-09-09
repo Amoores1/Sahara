@@ -1,5 +1,6 @@
 
 book1 = Book.new(title: "Harry Potter and the Philosopher's Stone", author: "J. K. Rowling", year: "1997", genre: "Fantasy", condition: "New")
+book1.photo.attach(io: URI.open("https://images-na.ssl-images-amazon.com/images/I/51mtZy7oJVL.jpg"), filename: "aston.jpg", content_type: "image/jpg")
 book1.save!
 puts "Generated book"
 
