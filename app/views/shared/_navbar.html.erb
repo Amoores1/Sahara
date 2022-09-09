@@ -1,9 +1,11 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "https://w1.pngwing.com/pngs/536/984/png-transparent-book-logo-book-design-childrens-literature-cartoon-page-text-orange-line.png" %>
+      <div class="d-flex align-items-center">
+        <%= image_tag "Sahara-circle" %>
+        <h3 class="mt-2 px-3 brand-title">SAHARA</h3>
+      </div>
     <% end %>
-
 
 
   <% if current_page?(root_path) %>
@@ -15,7 +17,7 @@
             params[:query],
             class: "form-control",
             id: "search-bar",
-            placeholder: "Harry Potter, Game of Thrones"
+            placeholder: "Harry Potter, Game of Thrones, Coding for Dummies"
           %>
           <%= submit_tag "Search for a book", class: "btn btn-outline-warning", id:"button-search" %>
           <% end %>

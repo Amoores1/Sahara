@@ -1,6 +1,7 @@
 .index-wrapper{
   display: flex;
   padding: 10px 0 10px 0;
+  background-color: rgb(255, 251, 241);
 }
 
 .list-container {
@@ -14,7 +15,8 @@
   display: flex;
   width: 100%;
   padding: 10px;
-  background-color: rgb(200, 200, 200);
+  background-color: rgb(255, 249, 233);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   align-items: center;
   border-radius: 10px;
   margin: 5px 0;
@@ -50,7 +52,8 @@
   margin: 0 50px;
   display: flex;
   flex-direction: column;
-  background-color: rgb(200, 200, 200);
+  background-color: rgb(255, 249, 233);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   position: sticky;
   right: 0;
   overflow-y: scroll;

@@ -11,18 +11,18 @@
       <h5>Genre</h5>
     </div>
     <div class="sub-option-container d-none" data-potato-target="genres">
-      <p><%= link_to "Adventure", books_path(genre: "adventure") %></p>
-      <p><%= link_to "Childrens", books_path(genre: "childrens") %></p>
-      <p><%= link_to "Classic", books_path(genre: "classic") %></p>
-      <p><%= link_to "Crime", books_path(genre: "crime") %></p>
-      <p><%= link_to "Fantasy", books_path(genre: "fantasy") %></p>
-      <p><%= link_to "Fiction", books_path(genre: "fiction") %></p>
-      <p><%= link_to "Horror", books_path(genre: "horror") %></p>
-      <p><%= link_to "Non-fiction", books_path(genre: "non-fiction") %></p>
-      <p><%= link_to "Science Fiction", books_path(genre: "science fiction") %></p>
-      <p><%= link_to "Graphic Novel", books_path(genre: "Graphic Novel") %></p>
-      <p><%= link_to "Epic Novel", books_path(genre: "Epic Novel") %></p>
-      <p><%= link_to "Romance", books_path(genre: "Romance") %></p>
+      <p><%= link_to "Adventure", request.params.merge(genre: "adventure") %></p>
+      <p><%= link_to "Childrens", request.params.merge(genre: "childrens") %></p>
+      <p><%= link_to "Classic", request.params.merge(genre: "classic") %></p>
+      <p><%= link_to "Crime", request.params.merge(genre: "crime") %></p>
+      <p><%= link_to "Fantasy", request.params.merge(genre: "fantasy") %></p>
+      <p><%= link_to "Fiction", request.params.merge(genre: "fiction") %></p>
+      <p><%= link_to "Horror", request.params.merge(genre: "horror") %></p>
+      <p><%= link_to "Non-fiction", request.params.merge(genre: "non-fiction") %></p>
+      <p><%= link_to "Science Fiction", request.params.merge(genre: "science fiction") %></p>
+      <p><%= link_to "Graphic Novel", request.params.merge(genre: "Graphic Novel") %></p>
+      <p><%= link_to "Epic Novel", request.params.merge(genre: "Epic Novel") %></p>
+      <p><%= link_to "Romance", request.params.merge(genre: "Romance") %></p>
     </div>
   <hr>
 
