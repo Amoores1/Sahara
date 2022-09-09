@@ -32,4 +32,9 @@ class BooksController < ApplicationController
     # @bookstores = Bookstore.where(bookstore_: @physical_books.bookstore)
   end
 
+  # private
+
+  # def book
+  #   params.require(:book).permit(:title, :genre, :condition, photos: [])
+  # end
 end

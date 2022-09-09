@@ -1,16 +1,21 @@
-<a id="plain-anchor" href="<%= book_path(book.id) %>">
-  <div class="book-container">
-    <div class="book-image-group">
+
+<a id="plain-anchor" href="<%= book_path(book.id) %>">=
+<div class="book-container">
+  <div class="book-image-group">
+    <% if book.photo.valid? %>
+      <%= image_tag(book.photo, class: "book-image")%>
+    <% else%>
       <img class="book-image" src="https://149352626.v2.pressablecdn.com/wp-content/uploads/2018/02/CK-3-684x1024.jpg" alt="placeholder" >
+    <%end%>
+  </div>
+  <div class="info-and-price">
+    <div class="book-info-group-left">
+      <p><%= book.title %></p>
+      <p>Author: <%= book.author %></p>
+      <p>Year: <%= book.year %></p>
+      <p>Genre: <%= book.genre %></p>
+      <p>Condition: <%= book.condition %></p>
     </div>
-    <div class="info-and-price">
-      <div class="book-info-group-left">
-        <p><%= book.title %></p>
-        <p>Author: <%= book.author %></p>
-        <p>Year: <%= book.year %></p>
-        <p>Genre: <%= book.genre %></p>
-        <p>Condition: <%= book.condition %></p>
-      </div>
       <div class="book-info-group-right">
         <%= link_to "Find a copy", book_path(book.id), class:"btn btn-primary" %>
       </div>
