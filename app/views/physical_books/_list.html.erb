@@ -1,19 +1,30 @@
 <% available_books = physical_books.where(available: true) %>
 <% sum = available_books.size %>
 
-<h3>There are <%= sum %> copies of <%= book.title %> near you</h3>
+<h2 class = "physical-book-bookstore mt-3">There are <%= sum %> copies of <%= book.title %> near you</h2>
 
 <% if available_books.exists? %>
-  <h2> Bookstores that have this copy</h2>
+  <h3 class = "physical-book-bookstore"> Bookstores that have this copy</h3>
   <% available_books.each do |physical_book| %>
-    <li>
-      <strong>£<%= physical_book.price %>,</strong>
+  <hr>
+    <div class = "physical-book-bookstore">
+      <p>
       <strong><%= physical_book.bookstore.name %></strong>
+      </p>
+      <p>
       <%= physical_book.bookstore.address %>
+      </p>
+      <div class="d-flex">
+      <p>
+      <strong>£<%= physical_book.price %></strong>
+      </p>
+      <div style="width:20px"></div>
       <%= button_to physical_book_basket_items_path(physical_book), method: :post do %>
         Add to basket
       <% end %>
-    </li>
+      </div>
+   </div>
+   <hr>
   <% end %>
 <% else %>
   <p>There are no books...</p>
