@@ -5,6 +5,7 @@ class Book < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
+  has_one_attached :photo
   has_many :physical_books
   has_many :bookstores, through: :physical_books
 end
