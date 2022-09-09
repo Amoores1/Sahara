@@ -35,7 +35,7 @@
                 Cart (<%= @current_cart.basket_items.count %>)
               </button>
               <ul class="dropdown-menu">
-                <%# render "basket_items/dropdown", cart: @current_cart %>
+                <%= render "/carts/dropdown_basket", cart: @current_cart %>
               </ul>
             </div>
           </li>

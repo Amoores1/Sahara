@@ -1,3 +1,5 @@
+
+<a id="plain-anchor" href="<%= book_path(book.id) %>">=
 <div class="book-container">
   <div class="book-image-group">
     <% if book.photo.valid? %>
@@ -14,8 +16,9 @@
       <p>Genre: <%= book.genre %></p>
       <p>Condition: <%= book.condition %></p>
     </div>
-    <div class="book-info-group-right">
-      <%= link_to "See More", book_path(book.id), class:"btn btn-primary" %>
+      <div class="book-info-group-right">
+        <%= link_to "Find a copy", book_path(book.id), class:"btn btn-primary" %>
+      </div>
     </div>
   </div>
-</div>
+</a>

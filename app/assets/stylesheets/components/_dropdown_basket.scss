@@ -1,0 +1,31 @@
+.basket-box{
+  width: 200px;
+}
+
+.basket-item{
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  padding:10px;
+}
+
+.basket-item:hover{
+  div{
+    #no-no-bootstrap {
+      visibility: visible;
+    }
+  }
+}
+
+.remove-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#no-no-bootstrap {
+  visibility: hidden;
+}
+
+.physical-book-bookstore{
+  margin-left: 20px;
+}
