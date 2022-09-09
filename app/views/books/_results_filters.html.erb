@@ -2,7 +2,7 @@
   <div class="filter-options">
     <div class="filter-headers">
       <h4>Filter by</h4>
-      <p><%= link_to "Reset", books_path %></p>
+      <p><%= link_to "Reset", books_path(query: params[:query]) %></p>
     </div>
     <hr>
 
@@ -20,6 +20,9 @@
       <p><%= link_to "Horror", books_path(genre: "horror") %></p>
       <p><%= link_to "Non-fiction", books_path(genre: "non-fiction") %></p>
       <p><%= link_to "Science Fiction", books_path(genre: "science fiction") %></p>
+      <p><%= link_to "Graphic Novel", books_path(genre: "Graphic Novel") %></p>
+      <p><%= link_to "Epic Novel", books_path(genre: "Epic Novel") %></p>
+      <p><%= link_to "Romance", books_path(genre: "Romance") %></p>
     </div>
   <hr>
 
@@ -28,11 +31,11 @@
     <h5>Year</h5>
   </div>
   <div data-potato-target="year" class="sub-option-container d-none">
-    <form action="/books" id ="year-container">
+    <form action="<%= request.url %>" method="GET" id ="year-container" data-controller="filter-date" data-action="submit->filter-date#applyFilter">
       <p>From: </p>
-      <input name="from" type="number" min="-400" max="2022" step="1" value="1850"/>
+      <input data-filter-date-target="from" name="from" type="number" min="-400" max="2022" step="1" value="1850"/>
       <p> to </p>
-      <input name="to" type="number" min="1900" max="2022" step="1" value="1914"/>
+      <input data-filter-date-target="to" name="to" type="number" min="-400" max="2022" step="1" value="2000"/>
       <input type="submit" value="Go">
     </form>
   </div>
@@ -43,11 +46,12 @@
     <h5>Condition</h5>
   </div>
     <div class="sub-option-container d-none " data-potato-target="condition">
-      <p><%= link_to "Mint", books_path(condition: "mint") %></p>
-      <p><%= link_to "Near Mint", books_path(condition: "Near Mint") %></p>
-      <p><%= link_to "Very Good", books_path(condition: "Very Good") %></p>
-      <p><%= link_to "Good", books_path(condition: "Good") %></p>
-      <p><%= link_to "Poor", books_path(condition: "Poor") %></p>
+      <p><%= link_to "New", request.params.merge(condition: "New") %></p>
+      <p><%= link_to "Like New", request.params.merge(condition: "Like New") %></p>
+      <p><%= link_to "Very Good", request.params.merge(condition: "Very Good") %></p>
+      <p><%= link_to "Good", request.params.merge(condition: "Good") %></p>
+      <p><%= link_to "Acceptable", request.params.merge(condition: "Acceptable") %></p>
+      <p><%= link_to "Poor", request.params.merge(condition: "Poor") %></p>
     </div>
   </div>
 </div>
