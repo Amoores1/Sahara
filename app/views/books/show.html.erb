@@ -4,4 +4,5 @@
     <%= render partial: '/layouts/map' %>
   </div>
 </div>
-<%= render partial: '/physical_books/physical' %>
+
+<%= render 'physical_books/list', physical_books: @book.physical_books, book: @book %>
