@@ -5,7 +5,7 @@ class Cart < ApplicationRecord
   def sub_total
     sum = 0
     self.basket_items.each do |basket_item|
-      sum+= basket_item.price
+      sum += basket_item.physical_book.price
     end
     return sum
   end

@@ -32,13 +32,14 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Cart (<%= @current_cart.basket_items.count %>)
+            <div class="dropdown basket-parent">
+              <button class="btn btn-warning dropdown-toggle"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa fa-shopping-cart"></i>
+              (<%= @current_cart.basket_items.count %>)
               </button>
-              <ul class="dropdown-menu">
-                <%= render "/carts/dropdown_basket", cart: @current_cart %>
-              </ul>
+
+              <%= render "/carts/dropdown_basket", cart: @current_cart %>
+
             </div>
           </li>
           <li class="nav-item">
