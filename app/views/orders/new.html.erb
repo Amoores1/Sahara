@@ -1,2 +1,9 @@
-<h1>Orders#new</h1>
-<p>Find me in app/views/orders/new.html.erb</p>
+<ul>
+  <% @current_cart.basket_items.each do |basket_item| %>
+    <li>Item: <%= basket_item.physical_book.book.title %>/ Price: <%= number_to_currency(basket_item.physical_book.price) %>
+  <% end %>
+</ul>
+<h3>Sub total: <%= number_to_currency(@current_cart.sub_total) %></h3>
+
+<h3>Pay using</h3>
+<%= button_to "PayPal", cart_path(@current_cart), method: :get, class: 'btn btn-primary' %>
