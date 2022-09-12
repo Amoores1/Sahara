@@ -1,4 +1,4 @@
-<div class="book-container2">
+<div class="d-flex">
   <div class="book-image-group2">
     <% if @book.photo.key %>
       <%= image_tag(@book.photo, class: "book-image2")%>
@@ -10,12 +10,12 @@
   <div class="info-and-price2">
     <div class="book-info-group-left2">
       <div>
-        <h3><%=@book.title%></h3>
+        <h3 id="book-info-group-title"><%=@book.title%></h3>
       </div>
-      <div>
-        <h5><strong>Author: </strong><%=@book.author%></h5>
-        <h5><strong>Genre: </strong><%=@book.genre%></h5>
-        <h5><strong>Year: </strong><%=@book.year%></h5>
+       <div>
+        <h5><%#<strong>Author: </strong>%><i class="fa-solid fa-circle-user"></i><%=@book.author%></h5>
+        <h5><%#<strong>Genre: </strong>%><i class="fa-solid fa-book"></i><%=@book.genre%></h5>
+        <h5><%#<strong>Year: </strong>%><i class="fa-regular fa-calendar"></i><%=@book.year%></h5>
       </div>
     </div>
   </div>

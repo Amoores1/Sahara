@@ -1,8 +1,11 @@
 <div class="one-more-wrapper">
-  <div class="index-wrapper2">
+  <div class="book-container2">
     <%= render partial: '/books/book_info' %>
-    <%= render partial: '/layouts/map' %>
+    <%= render 'physical_books/list', physical_books: @book.physical_books, book: @book %>
   </div>
+  <%# <div class="map"> %>
+    <%# <div class="show_map col"> %>
+      <%= render partial: '/layouts/map' %>
+    <%# </div> %>
+  <%# </div> %>
 </div>
-
-<%= render 'physical_books/list', physical_books: @book.physical_books, book: @book %>

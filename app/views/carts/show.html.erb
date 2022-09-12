@@ -1,5 +1,3 @@
-<h2>Cart show</h2>
-
 <ul>
   <% @cart.basket_items.each do |basket_item| %>
     <li>Item: <%= basket_item.physical_book.book.title %>/ Price: <%= number_to_currency(basket_item.physical_book.price) %>
@@ -16,3 +14,5 @@
 <%= link_to "Proceed to checkout", new_order_path %>
 <br>
 <%= link_to "Empty cart", cart_path(@current_cart), method: :delete, data: {confirm: "Are you sure?"} %>
+
+<%= render 'orders/order' %>

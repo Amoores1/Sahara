@@ -1,14 +1,15 @@
 .index-wrapper{
   display: flex;
-  padding: 10px 0 10px 0;
+  padding: 10px 150px 10px 150px;
   background-color: rgb(255, 251, 241);
 }
 
 .list-container {
   display:flex;
   flex-direction: column;
-  width: 60vw;
+  width: 50vw;
   margin: 0 50px;
+  // margin-left: 200px;
 }
 
 .book-container{
@@ -25,6 +26,8 @@
 
 .book-image {
   width: 150px;
+  height:200px;
+  // height: 220px;
 }
 
 .info-and-price {
@@ -57,7 +60,11 @@
   position: sticky;
   right: 0;
   overflow-y: scroll;
-  height: 94vh;
+  height: fit-content;
+  // max-height: 94vh;
+  // height: 94vh;
+  // max-height: min-content;
+  // max-height: fit-content;
   top: 20px;
   bottom :20px;
 }
@@ -74,4 +81,15 @@
 #plain-anchor {
   text-decoration: inherit;
   color: inherit;
+}
+
+// .scrollable {
+//   position: sticky;
+//   // max-height:94vh;
+//   overflow-y:scroll;
+
+// }
+
+.input-year {
+  max-width: 100px;
 }
