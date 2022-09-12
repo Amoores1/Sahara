@@ -1,0 +1,13 @@
+  <div class="filter-title" data-action="click->potato#revealCondition">
+    <i class="fa-solid fa-caret-right" data-potato-target="conditioncaret"></i>
+    <h5>Condition</h5>
+  </div>
+    <div class="sub-option-container d-none " data-potato-target="condition">
+      <p><%= link_to "New", request.params.merge(condition: "New") %></p>
+      <p><%= link_to "Like New", request.params.merge(condition: "Like New") %></p>
+      <p><%= link_to "Very Good", request.params.merge(condition: "Very Good") %></p>
+      <p><%= link_to "Good", request.params.merge(condition: "Good") %></p>
+      <p><%= link_to "Acceptable", request.params.merge(condition: "Acceptable") %></p>
+      <p><%= link_to "Poor", request.params.merge(condition: "Poor") %></p>
+    </div>
+  </div>

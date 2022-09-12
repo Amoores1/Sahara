@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_12_085808) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_12_092706) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -60,7 +60,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_12_085808) do
     t.string "author"
     t.integer "year"
     t.string "genre"
-    t.string "condition"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
