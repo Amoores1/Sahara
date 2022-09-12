@@ -1,0 +1,22 @@
+<div class="order-container">
+ <div class="order-description">
+  <p> Order number: <% @cart.order %> </p>
+ </div>
+ <div class="order-overview">
+  <div class="left-box">
+  </div>
+  <div class="center-box">
+  <% @cart.basket_items.each do |basket_item| %>
+    <ul><%= basket_item.physical_book.book.title %>
+    </ul>
+  <% end %>
+  </div>
+  <div class="right-box">
+
+    <div class="item-one">
+    </div>
+    <div class="item-two">
+    </div>
+  </div>
+ </div>
+</div>
