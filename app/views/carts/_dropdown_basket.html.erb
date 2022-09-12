@@ -1,18 +1,19 @@
-<div class="basket-box">
-  <% cart.basket_items.each do |basket_item| %>
-    <div class="basket-item">
-      <div class="remove-button">
-        <a id="no-no-bootstrap">x</a>
-      </div>
-      <div class="d-flex">
-        <p><%= basket_item.physical_book.book.title %></p>
-        <p>£<%= basket_item.physical_book.price %></p>
-      </div>
+
+  <div class="dropdown-menu" id="basket-box">
+      <% cart.basket_items.each do |basket_item| %>
+        <div class="basket-item">
+          <div class="remove-button">
+            <%= link_to "X", basket_item_path(basket_item), data: { "turbo-method": :delete }, id:"no-no-bootstrap" %>
+          </div>
+          <div class="d-flex">
+            <p><%= basket_item.physical_book.book.title %></p>
+            <p>£<%= basket_item.physical_book.price %></p>
+          </div>
+        </div>
+        <hr>
+      <% end %>
+    <div class="d-flex m-2">
+      <button class="btn btn-success">Continue Shopping</button>
+      <button class="btn btn-primary">Go To Checkout</button>
     </div>
-    <hr>
-  <% end %>
-</div>
-<div class="d-flex m-2">
-  <button class="btn btn-success">Continue Shopping</button>
-  <button class="btn btn-primary">Go To Checkout</button>
-</div>
+    </div>

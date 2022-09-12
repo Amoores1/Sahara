@@ -5,7 +5,7 @@
     <li>Item: <%= basket_item.physical_book.book.title %>/ Price: <%= number_to_currency(basket_item.physical_book.price) %>
     <ul>
       <li>
-        <%= link_to "Remove item", basket_item_path(basket_item), method: :delete %>
+        <%= link_to "Remove Item", basket_item_path(basket_item), data: { "turbo-method": :delete } %>
       </li>
     </ul>
   <% end %>

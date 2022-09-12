@@ -1,5 +1,14 @@
-.basket-box{
-  width: 200px;
+.basket-parent {
+  position: relative;
+}
+
+#basket-box{
+  width: 300px;
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+  left: auto !important;
+  right: 0px;
 }
 
 .basket-item{
@@ -13,6 +22,7 @@
   div{
     #no-no-bootstrap {
       visibility: visible;
+      cursor: pointer;
     }
   }
 }
@@ -24,6 +34,14 @@
 
 #no-no-bootstrap {
   visibility: hidden;
+  font-size: 9px;
+  background: red;
+  padding: 3px;
+  border-radius: 3px;
+  color: white;
+  width: 18px;
+  text-align: center;
+  text-decoration: none
 }
 
 .physical-book-bookstore{
