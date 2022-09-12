@@ -13,8 +13,12 @@
 
 .book-container2 {
   display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
   width: 50%;
   padding: 10px 0 10px 0;
+  overflow-y: scroll;
   background-color: #FCFCFC;
   font-family: 'Lucida Sans'
 }
