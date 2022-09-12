@@ -19,7 +19,9 @@
             id: "search-bar",
             placeholder: "Harry Potter, Game of Thrones, Coding for Dummies"
           %>
-          <%= submit_tag "Search for a book", class: "btn btn-outline-warning", id:"button-search" %>
+          <%= button_tag(type: "submit", class: "btn btn-outline-warning", id:"button-search") do %>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          <% end %>
           <% end %>
       </div>
     <% end %>
