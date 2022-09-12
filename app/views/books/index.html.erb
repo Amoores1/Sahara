@@ -1,6 +1,6 @@
 <div class="index-wrapper">
   <div class="list-container">
-  <h3>Results</h3>
+  <%# <h3>Results</h3> %>
     <% @books.each do |book| %>
       <%= render partial: '/books/book_result', locals: {book: book} %>
     <% end %>

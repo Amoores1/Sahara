@@ -2,15 +2,20 @@ body {
   background: #fcfcfc;
   font-family: 'Lucida Sans';
 }
+
 footer {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #FCECDD;
+
+  // background: rgb(131, 129, 129);
+  background: #FF6701;
+
+  // background: #FCECDD;
+
   opacity: .7;
   height: auto;
   width: 100%;
-
   padding-top: 20px;
   color: #FEA82F;
 }
@@ -52,10 +57,17 @@ footer {
   color: orange;
 }
 .footer-bottom {
+
+  background: #FF6701;
+  // background: #000;
+
   background: white;
+
   width: 100%;
-  padding: 20px;
-  padding-bottom: 40px;
+  // padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
   text-align: center;
 }
 .footer-bottom p {
