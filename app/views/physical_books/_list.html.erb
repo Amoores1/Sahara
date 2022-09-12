@@ -21,8 +21,8 @@
         <strong>£<%= physical_book.price %></strong>
         </p>
         <div style="width:20px"></div>
-        <%= button_to physical_book_basket_items_path(physical_book), method: :post do %><i class="basket fa-solid fa-cart-shopping"></i>
-          <%# Add to basket %>
+        <%= button_to physical_book_basket_items_path(physical_book), method: :post do %>
+           Add to basket
         <% end %>
         </div>
     </div>
