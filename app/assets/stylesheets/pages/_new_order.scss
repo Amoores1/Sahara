@@ -1,0 +1,19 @@
+.new-order-container {
+  width: 50vw;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 20px 0 0 20px;
+  hr{
+    margin: 0px !important;
+  }
+}
+
+.basket-item {
+  width:100%;
+  margin: 10px;
+}
+
+.payment-div {
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,9 +1,35 @@
-<ul>
+<div class="new-order-container">
   <% @current_cart.basket_items.each do |basket_item| %>
-    <li>Item: <%= basket_item.physical_book.book.title %>/ Price: <%= number_to_currency(basket_item.physical_book.price) %>
+    <div class="basket-item">
+      <%= basket_item.physical_book.book.title %>/ Price: £<%= basket_item.physical_book.price %>
+    </div>
+    <hr>
   <% end %>
-</ul>
-<h3>Sub total: <%= number_to_currency(@current_cart.sub_total) %></h3>
+  <div class="payment-div">
+    <h3 class="m-3">Sub total: £<%= @current_cart.sub_total %></h3>
 
-<h3>Pay using</h3>
-<%= button_to "PayPal", cart_path(@current_cart), method: :get, class: 'btn btn-primary' %>
+  <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      Make Payment
+    </button>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Thank you</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Your payment is confirmed
+      </div>
+      <div class="modal-footer">
+        <%= button_to "Confirm", orders_path, method: :post, class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+</div>

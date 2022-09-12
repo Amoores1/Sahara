@@ -12,7 +12,8 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(order_params)
+    @order = Order.new
+    @order.user = current_user
     @current_cart.basket_items.each do |item|
       @order.basket_items << item
       item.cart_id = nil
@@ -20,7 +21,7 @@ class OrdersController < ApplicationController
     @order.save
     Cart.destroy(session[:cart_id])
     session[:cart_id] = nil
-    redirect_to root_path
+    redirect_to order_path(@order)
   end
 
   private
