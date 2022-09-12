@@ -17,16 +17,23 @@
   height: 100vh;
   position: sticky;
   width: 50%;
-  padding: 10px 0 10px 0;
+  border-left: 5px;
+  padding: 5px 0 5px 0;
   overflow-y: scroll;
   background-color: #FCFCFC;
   font-family: 'Lucida Sans'
+}
+.d-flex{
+  margin: 15px 10px;
 }
 
 .book-image2 {
   width: 200px;
   height: 282px;
-  padding-left: 10px;
+  margin-left: 20px;
+  border-radius: 3px;
+  box-shadow: 1px 3px 10px rgba(0,0,0,0.2),
+  1px 2px 7px rgba(0,0,0,0.6);
 }
 
 .info-and-price2 {
@@ -40,6 +47,9 @@
   flex-direction: column;
   padding: 0 20px;
   justify-content: space-around;
+  background-color: #FCECDD;
+  border-radius: 5px;
+  box-shadow: 1px 1px 7px rgba(0,0,0,0.2);
 }
 
 .book-info-group-right2 {
@@ -47,7 +57,13 @@
   flex-direction: column;
   padding: 0 20px;
 }
+#book-info-group-title {
+  text-align: center;
+  font-family: Helvetica;
+  lighting-color: white;
+  text-shadow: 0px 0px 4px whitesmoke;
 
+}
 
 .sub-option-container2 {
   margin-left: 10px;
