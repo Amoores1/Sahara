@@ -176,7 +176,7 @@ physical_book8 = PhysicalBook.new(price: 22, available: false, book: book5, book
 physical_book8.save!
 puts "generated physical book"
 
-physical_book6 = PhysicalBook.new(price: 15, available: "yes", book: book1, bookstore: bookstore1)
+physical_book6 = PhysicalBook.new(price: 15, available: "yes", book: book1, bookstore: bookstore1, condition: "new")
 physical_book6.save!
 puts "generated physical book"
 
