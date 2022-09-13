@@ -3,9 +3,5 @@
     <%= render partial: '/books/book_info' %>
     <%= render 'physical_books/list', physical_books: @book.physical_books, book: @book %>
   </div>
-  <%# <div class="map"> %>
-    <%# <div class="show_map col"> %>
-      <%= render partial: '/layouts/map' %>
-    <%# </div> %>
-  <%# </div> %>
+  <%= render partial: '/layouts/map' %>
 </div>
