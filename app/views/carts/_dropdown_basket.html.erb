@@ -1,20 +1,23 @@
 
   <div class="dropdown-menu" id="basket-box">
-      <% cart.basket_items.each do |basket_item| %>
-        <div class="basket-item">
-          <div class="remove-button">
-            <%= link_to "X", basket_item_path(basket_item), data: { "turbo-method": :delete }, id:"no-no-bootstrap" %>
-          </div>
-          <div class="d-flex">
-            <p><%= basket_item.physical_book.book.title %></p>
-            <p>£<%= basket_item.physical_book.price %></p>
-          </div>
+    <% cart.basket_items.each do |basket_item| %>
+      <div class="basket-item">
+        <div class="remove-button">
+          <%= link_to "X", basket_item_path(basket_item), data: { "turbo-method": :delete }, id:"no-no-bootstrap" %>
         </div>
-      <hr>
-  <% end %>
+        <div class="individual-basket-item">
+          <p><%= basket_item.physical_book.book.title %></p>
+          <p>£<%= basket_item.physical_book.price %></p>
+        </div>
+        <hr>
+      </div>
+    <% end %>
   <div class="d-flex m-2">
-    <%= button_to "Continue Shopping", books_path, method: :get, class: 'btn btn-success' %>
-    <%= button_to "Go to Checkout", cart_path(@current_cart), method: :get, class: 'btn btn-warning' %>
+    <div class="checkout-buttons">
+      <%= button_to "Continue Shopping", books_path, method: :get, class: 'btn btn-success', id:"checkout-buttons-left" %>
+    </div>
+    <div class="checkout-buttons">
+      <%= button_to "Go to Checkout", new_order_path(@current_cart), method: :get, class: 'btn btn-warning' , id:"checkout-buttons-right" %>
+    </div>
   </div>
 </div>
-

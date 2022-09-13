@@ -1,19 +1,33 @@
 <div class="new-order-container">
-  <% @current_cart.basket_items.each do |basket_item| %>
-    <div class="basket-item">
-      <%= basket_item.physical_book.book.title %>/ Price: £<%= basket_item.physical_book.price %>
-    </div>
-    <hr>
-  <% end %>
-  <div class="payment-div">
-    <h3 class="m-3">Sub total: £<%= @current_cart.sub_total %></h3>
+  <div class="left-side-new-order">
+    <% @current_cart.basket_items.each do |basket_item| %>
+      <div class="basket-item-order">
+        <div class="basket-item-order-top">
+          <h6><%= basket_item.physical_book.book.title %></h6>
+          <h6><%= link_to "X", basket_item_path(basket_item), data: { "turbo-method": :delete } %></h6>
+        </div>
+        <div class="basket-item-order-bottom">
+          <p class="order-info">Price: £<%= basket_item.physical_book.price %></p>
+          <p class="order-info">Bookstore: <%= basket_item.physical_book.bookstore.name %></p>
+          <p class="order-info">Address: <%= basket_item.physical_book.bookstore.address %></p>
+        </div>
+      </div>
+      <hr>
+    <% end %>
 
-  <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-      Make Payment
-    </button>
+    <div class="payment-div">
+      <h3 class="m-3">Sub total: £<%= @current_cart.sub_total %></h3>
+    <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Make Payment
+      </button>
+    </div>
+    
   </div>
 </div>
+
+
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
