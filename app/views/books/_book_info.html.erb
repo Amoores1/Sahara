@@ -1,22 +1,21 @@
-<div class="book-container2">
-  <div class="book-image-group2">
-    <% if @book.photo.key %>
-      <%= image_tag(@book.photo, class: "book-image2")%>
-    <% else%>
-      <img src="https://149352626.v2.pressablecdn.com/wp-content/uploads/2018/02/CK-3-684x1024.jpg" alt="book" width="600 px">
-    <%end%>
-    <%# <img class="book-image2" src="https://149352626.v2.pressablecdn.com/wp-content/uploads/2018/02/CK-3-684x1024.jpg" alt="placeholder" > %>
-  </div>
-  <div class="info-and-price2">
-    <div class="book-info-group-left2">
-      <div>
-        <h3><%=@book.title%></h3>
+<div class="box-card d-flex">
+    <div class="card">
+      <div class="image">
+        <% if @book.photo.key %>
+          <%= image_tag(@book.photo, class: "book-image2")%>
+        <% else%>
+          <img src="https://149352626.v2.pressablecdn.com/wp-content/uploads/2018/02/CK-3-684x1024.jpg" alt="book" width="600 px">
+        <%end%>
       </div>
-      <div>
-        <h5><strong>Author: </strong><%=@book.author%></h5>
-        <h5><strong>Genre: </strong><%=@book.genre%></h5>
-        <h5><strong>Year: </strong><%=@book.year%></h5>
+      <div class="details">
+        <div class="center">
+          <h3 id="book-info-group-title"><%=@book.title%></h3>
+          <div class="<info-book>">
+            <h5><i class="fa-solid fa-circle-user"></i><%=@book.author%></h5>
+            <h5><i class="fa-solid fa-book"></i><%=@book.genre%></h5>
+            <h5><i class="fa-regular fa-calendar"></i><%=@book.year%></h5>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 </div>

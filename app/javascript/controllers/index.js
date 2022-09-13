@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import ControllerController from "./controller_controller"
+application.register("controller", ControllerController)
+
 import FilterDateController from "./filter_date_controller"
 application.register("filter-date", FilterDateController)
 
@@ -12,6 +15,9 @@ application.register("hello", HelloController)
 
 import MapController from "./map_controller"
 application.register("map", MapController)
+
+import PayModalController from "./pay_modal_controller"
+application.register("pay-modal", PayModalController)
 
 import PotatoController from "./potato_controller"
 application.register("potato", PotatoController)
