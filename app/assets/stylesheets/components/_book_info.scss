@@ -101,7 +101,8 @@
   left: 0;
   width: 80%;
   height: 100%;
-  background: #FF6701;
+  background: rgb(252,236,221);
+  background: linear-gradient(270deg, rgba(252,236,221,1) 10%, rgba(255,194,136,1) 99%);
   transition: 0.8s;
   transform-origin: left;
   transform: perspective(2000px) rotateY(-90deg);
@@ -112,24 +113,23 @@
 .card .details .center {
   padding: 30px 10px;
   text-align: center;
-  background: #fff;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 .card .details .center h3 {
-  margin: 0;
-  padding: 0;
+  margin-bottom: 20px;
+  padding: 3px 0;
+  word-spacing: 2px;
+  padding: 3px;
   color: #FF6701;
-  line-height: 20px;
-  font-size: 20px;
+  font-size: 26px;
 }
-.card .details .center h3 span {
-  font-size: 14px;
-  color: #262626;
+.info-book {
+  margin: 10px 0;
 }
-.card .details .center p {
+.card .details .center h5 {
   margin: 5px 0;
-  padding: 0;
+  text-align: left;
   color: #262626;
 }

@@ -10,9 +10,11 @@
       <div class="details">
         <div class="center">
           <h3 id="book-info-group-title"><%=@book.title%></h3>
-          <h5><i class="fa-solid fa-circle-user"></i><%=@book.author%></h5>
-          <h5><i class="fa-solid fa-book"></i><%=@book.genre%></h5>
-          <h5><i class="fa-regular fa-calendar"></i><%=@book.year%></h5>
+          <div class="<info-book>">
+            <h5><i class="fa-solid fa-circle-user"></i><%=@book.author%></h5>
+            <h5><i class="fa-solid fa-book"></i><%=@book.genre%></h5>
+            <h5><i class="fa-regular fa-calendar"></i><%=@book.year%></h5>
+          </div>
         </div>
       </div>
     </div>
