@@ -1,6 +1,8 @@
 body {
-  background: #fcfcfc;
+  background: white;
   font-family: 'Lucida Sans';
+  background-image: url(books.jpg);
+  width: 100vw;
 }
 
 footer {
@@ -9,7 +11,8 @@ footer {
   right: 0;
 
   // background: rgb(131, 129, 129);
-  background: #FF6701;
+
+
 
   // background: #FCECDD;
 
@@ -17,7 +20,7 @@ footer {
   height: auto;
   width: 100%;
   padding-top: 20px;
-  color: #FEA82F;
+  color: #ea9143;
 }
 .footer-content {
   display: flex;
@@ -36,7 +39,7 @@ footer {
   margin: 10px auto;
   line-height: 28px;
   font-size: 16px;
-  color: #FEA82F;
+  color: #ea9143;
   lighting-color: black;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
@@ -49,7 +52,6 @@ footer {
 }
 .socials i {
   margin: 10px;
-  padding: 5px;
   font-size: 1rem;
   width: 20px;
 }

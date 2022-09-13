@@ -1,7 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   // background: white;
-  background: #FCECDD;
+  background:white;
   height: 60px !important;
   align-items: center;
 }
@@ -29,10 +29,14 @@
 }
 
 .brand-title{
+  padding-left: 10px;
+  padding-bottom: 3px;
   font-weight:lighter;
   position: absolute;
   left: 100%;
   bottom: 8px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #262626;
 }
 #bigbar{
   width: 35vw;
