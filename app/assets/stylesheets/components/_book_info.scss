@@ -23,7 +23,7 @@
   background-color: #FCFCFC;
   font-family: 'Lucida Sans'
 }
-.box {
+.box-card {
   margin: 15px 10px;
 }
 
@@ -86,6 +86,9 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.5),
+  0 0 12px rgba(0,0,0,0.3),
+  0 0 15px rgba(0,0,0,0.2);
 }
 .card .image img {
   width: 100%;
@@ -132,4 +135,7 @@
   margin: 5px 0;
   text-align: left;
   color: #262626;
+}
+.card .details .center i {
+  padding: 4px 8px;
 }
