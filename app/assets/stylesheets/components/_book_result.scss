@@ -6,28 +6,33 @@
 
 .list-container {
   display:flex;
-  flex-direction: column;
-  width: 50vw;
-  margin: 0 50px;
-  // margin-left: 200px;
+  flex-wrap: wrap;
+  width: 65vw;
 }
 
 .book-container{
   display: flex;
-  width: 100%;
-  padding: 10px;
-  background-color: rgb(255, 249, 233);
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  flex-direction: column;
+  width: 80%;
   align-items: center;
-  border-radius: 10px;
   margin: 5px 0;
 }
-
 
 .book-image {
   width: 150px;
   height:200px;
-  // height: 220px;
+  margin: 10px 10px;
+  box-shadow:rgba(0,0,0,0.2) 0 0 10px,
+  rgba(0, 0, 0, 0.24) 0px 3px 8px,
+  rgba(0,0,0,0.35) 2px 4px 4px -1px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  transition: transform .4s; // Animation
+}
+
+.book-image:hover {
+  transform: scale(1.2);
 }
 
 .info-and-price {
@@ -51,8 +56,8 @@
 
 
 .book-filters {
-  width: 25vw;
-  margin: 0 50px;
+  width: 20vw;
+  margin: 0 30px;
   display: flex;
   flex-direction: column;
   background-color: rgb(255, 249, 233);
@@ -70,7 +75,7 @@
 }
 
 .filter-options {
-  margin-left: 20px;
+  margin-left: 16px;
   padding: 20px;
 }
 

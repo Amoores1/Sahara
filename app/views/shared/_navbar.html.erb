@@ -1,46 +1,46 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <%= link_to root_path, class: "navbar-brand" do %>
-      <div class="d-flex align-items-center">
-        <%= image_tag "Sahara-circle" %>
-        <h3 class="mt-2 px-3 brand-title">SAHARA</h3>
-      </div>
-    <% end %>
+  <%= link_to root_path do %>
+    <div class="d-flex align-items-center navbar-brand">
+      <%= image_tag "Sahara-circle" %>
+      <h3 class="brand-title">SAHARA</h3>
+    </div>
+  <% end %>
 
 
-  <% if current_page?(root_path) %>
+<% if current_page?(root_path) %>
 
-    <% else  %>
-      <div class="nav-item">
-        <%= form_with url: books_path, method: :get, class: "rounded d-flex input-group" do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            id: "search-bar",
-            placeholder: "Harry Potter, Game of Thrones, Coding for Dummies"
-          %>
-          <%= button_tag(type: "submit", class: "btn btn-outline-warning", id:"button-search") do %>
-            <i class="fa-solid fa-magnifying-glass"></i>
-          <% end %>
-          <% end %>
-      </div>
-    <% end %>
+  <% else  %>
+    <div class="nav-item">
+      <%= form_with url: books_path, method: :get, class: "rounded d-flex input-group", id:"bigbar" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          id: "search-bar",
+          placeholder: "Harry Potter, Game of Thrones, Coding for Dummies"
+        %>
+        <%= button_tag(type: "submit", class: "btn btn-outline-warning", id:"button-search") do %>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        <% end %>
+        <% end %>
+    </div>
+  <% end %>
 
-    <%# <button class="navbar-  toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> %>
+  <%# <button class="navbar-  toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> %>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <% if user_signed_in? %>
-          <li class="nav-item active">
-            <div class="dropdown basket-parent">
-              <button class="btn btn-warning dropdown-toggle"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="fa fa-shopping-cart"></i>
-              (<%= @current_cart.basket_items.count %>)
-              </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto">
+      <% if user_signed_in? %>
+        <li class="nav-item active">
+          <div class="dropdown basket-parent">
+            <button class="btn btn-warning dropdown-toggle"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-shopping-cart"></i>
+            (<%= @current_cart.basket_items.count %>)
+            </button>
 
-              <%= render "/carts/dropdown_basket", cart: @current_cart %>
+            <%= render "/carts/dropdown_basket", cart: @current_cart %>
+
 
             </div>
           </li>
