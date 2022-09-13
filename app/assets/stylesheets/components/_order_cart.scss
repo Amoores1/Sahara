@@ -11,6 +11,14 @@
   width: 100%;
   height: 70px;
   background-color: #FCECDD;
+
+ }
+
+ .order-box {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
  }
 
 .order-overview{
@@ -23,18 +31,24 @@
 }
 
 .left-box{
+  display: flex;
   width: 25%;
   background-color: white;
   border: 1px solid #E8EAE6;
+  justify-content: center;
+  align-items: center;
 
 }
 
 .center-box{
+  display: flex;
   width: 50%;
   background-color: white;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   border: 1px solid #E8EAE6;
-
+  ul {
+  margin-top: 40px ;
+  }
 }
 
 .right-box{
@@ -45,6 +59,13 @@ background-color: white;
 border: 1px solid #E8EAE6;
 }
 
+.orders {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  justify-content: center;
+  align-items: center;
+}
 .item-one{
 
 }

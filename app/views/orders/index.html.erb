@@ -1,12 +1,37 @@
-<h2>All Orders</h2>
+<div class="orders">
+
 
 <% @orders.each do |order| %>
-  <p>Email: <%= order.user.email %></p>
-  <p>price: £<%= order.total_price %></p>
-  <p>Basket Items: </p>
-  <ul>
-    <% order.basket_items.each do |item| %>
-      item.title
-    <% end %>
-  </ul>
+<div class="order-container">
+
+<div class="order-description">
+<div class="order-box">
+<h5> Order number: <%= order.id %> </h5>
+</div>
+</div>
+ <%  order.basket_items.each do |basket| %>
+
+ <div class="order-overview">
+
+
+
+<div class="left-box">
+  <%= image_tag(basket.physical_book.book.photo, class: "book-image")%>
+  </div>
+  <div class="center-box">
+    <ul><%= basket.physical_book.book.title %>
+    </ul>
+  </div>
+  <div class="right-box">
+
+  <div class="item-one">
+  </div>
+
+  <div class="item-two">
+  </div>
+  </div>
+</div>
+ <% end %>
 <% end %>
+</div>
+</div>
