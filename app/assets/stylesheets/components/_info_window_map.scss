@@ -1,15 +1,43 @@
-// .specific-marker {
+// .content-marker {
 //   display: flex;
 // }
-img {
-  width: 100%;
-  padding: 8px;
-}
-
-// .content-marker {
-// }
-h3 {
+h4 {
   padding: 5px;
   text-align: justify;
+}
+.fa-route {
+  padding-right: 6px;
+}
 
+
+
+/* CSS */
+.button-path {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  cursor: pointer;
+  font-family: arial,sans-serif;
+  font-size: 14px;
+  height: 36px;
+  line-height: 27px;
+  min-width: 54px;
+  padding: 0 16px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: pre;
+}
+
+.button-path:hover {
+  border-color: #dadce0;
+  box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+  color: #202124;
+}
+
+.button-path:focus {
+  border-color: #0E0000;
+  outline: none;
 }

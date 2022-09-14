@@ -4,9 +4,9 @@
 .mapbox-map {
   position: relative;
   width: 50vw;
-  height: 81vh;
-  border-top: 5px;
-  padding: 16px 40px;
+  height: 100vh;
+  border: 5px;
+  // padding: 8px 16px;
   background-color: white;
 }
 
@@ -24,8 +24,8 @@
 
 .mapboxgl-popup-content {
   text-align: right;
-  // height: 220px;
-  // width: 180px;
+  height: 220px;
+  width: 180px;
   font-family: "Open Sans", sans-serif;
 }
 
