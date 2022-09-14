@@ -22,7 +22,7 @@
       </p>
       <div class="d-flex">
       <p>
-      <strong>£<%= physical_book.price %></strong>
+      <strong>£<%= physical_book.stripe_price%></strong>
       </p>
       <div style="width:20px"></div>
       <%= button_to physical_book_basket_items_path(physical_book), method: :post do %>

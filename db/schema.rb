@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_12_092706) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_14_132826) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -86,6 +86,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_12_092706) do
     t.string "pay_status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "amount_cents", default: 0, null: false
+    t.string "checkout_session_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
@@ -97,6 +99,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_12_092706) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "condition"
+    t.integer "stripe_price_cents", default: 0, null: false
     t.index ["book_id"], name: "index_physical_books_on_book_id"
     t.index ["bookstore_id"], name: "index_physical_books_on_bookstore_id"
   end

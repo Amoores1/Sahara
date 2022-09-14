@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'orders/index'
-  get 'orders/show'
-  get 'orders/new'
   get 'carts/show'
   devise_for :users
   root to: "pages#home"
@@ -26,6 +23,8 @@ Rails.application.routes.draw do
   get 'basket_items/:id' => "basket_items#show", as: "basket_item"
   delete 'basket_items/:id' => "basket_items#destroy"
 
-  resources :orders
+  resources :orders do
+    resources :payments, only: :new
+  end
 
 end
