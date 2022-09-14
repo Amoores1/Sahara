@@ -1,10 +1,13 @@
+.one-more-wrapper {
+  background-color: white;
+}
 .mapbox-map {
   position: relative;
   width: 50vw;
   height: 81vh;
   border-top: 5px;
   padding: 16px 40px;
-  background-color: #FCFCFC;
+  background-color: white;
 }
 
 .mapboxgl-popup {

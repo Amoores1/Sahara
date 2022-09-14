@@ -3,37 +3,37 @@
 
 
 <div class="info-list-results">
-<h2 class = "physical-book-bookstore mt-3">There are <%= sum %> copies of <%= book.title %> near you:</h2>
+  <h2 class = "physical-book-bookstore mt-3">There are <%= sum %> copies of <%= book.title %> near you:</h2>
 
-<% if available_books.exists? %>
-<% available_books.group_by {|b| b.bookstore }.each do |bookstore, bookstore_books|%>
+  <% if available_books.exists? %>
+  <% available_books.group_by {|b| b.bookstore }.each do |bookstore, bookstore_books|%>
 
-  <% bookstore_books.each do |physical_book| %>
-  <hr>
-    <div class = "physical-book-bookstore">
-      <p>
-      <strong><%= bookstore.name %></strong>
-      </p>
-      <p>
-      <%= bookstore.address %>
-      </p>
-      <p>
-      <%= physical_book.condition %>
-      </p>
-      <div class="d-flex">
-      <p>
-      <strong>£<%= physical_book.price %></strong>
-      </p>
-      <div style="width:20px"></div>
-      <%= button_to physical_book_basket_items_path(physical_book), method: :post do %>
-        Add to basket
-      <% end %>
-      </div>
-   </div>
-   <hr>
+    <% bookstore_books.each do |physical_book| %>
+    <hr>
+      <div class = "physical-book-bookstore">
+        <p>
+        <strong><%= bookstore.name %></strong>
+        </p>
+        <p>
+        <%= bookstore.address %>
+        </p>
+        <p>
+        <%= physical_book.condition %>
+        </p>
+        <div class="price-basket d-flex">
+          <p>
+          <strong>£<%= physical_book.price %></strong>
+          </p>
+          <div>
+            <%= button_to physical_book_basket_items_path(physical_book), method: :post do %>
+              Add to basket
+            <% end %>
+          </div>
+        </div>
+    </div>
+    <% end %>
+    <% end %>
+  <% else %>
+    <p>There are no books...</p>
   <% end %>
-  <% end %>
-<% else %>
-  <p>There are no books...</p>
-<% end %>
 </div>
