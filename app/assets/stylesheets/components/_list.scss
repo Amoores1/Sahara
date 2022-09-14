@@ -5,8 +5,7 @@
 .physical-book-bookstore {
   color: #0E0000;
   padding: 5px 72px;
-  // background: rgb(255,251,241);
-  // background: linear-gradient(0deg, rgba(253,240,227,1) 0%, rgba(255,251,241,1) 5%, rgba(255,251,241,1) 95%, rgba(252,236,222,1) 100%);
+  font-family: Nunito;
 }
 em:hover {
   color: #FF6701;
@@ -18,9 +17,52 @@ em:hover {
   color: #FF6701;
   border-radius: 50%;
 }
-button_to {
-  color: #FF6701;
-}
+
 .bookstore-name {
   color: black;
+}
+
+// .price-basket{
+//   display: flex;
+// }
+button {
+  // margin-right: 3px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: right;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  height: 36px;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+button:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
 }
