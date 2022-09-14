@@ -6,7 +6,13 @@
 
 <div class="order-description">
 <div class="order-box">
-<h5> Order number: <%= order.id %> </h5>
+<p> Order number: <%= order.id %> </p>
+</div>
+<div class="box-2">
+<p> Order placed: <%= order.created_at %> </p>
+</div>
+<div class="box-3">
+<p> Order total: £<%= order.total_price %> </p>
 </div>
 </div>
  <%  order.basket_items.each do |basket| %>
@@ -23,15 +29,20 @@
     </ul>
   </div>
   <div class="right-box">
-
+   <br>
+   <br>
+   <br>
   <div class="item-one">
+  <%= button_to "View this book", book_path(basket.physical_book.book), method: :get, class: 'btn btn-warning' %>
   </div>
-
+   <br>
   <div class="item-two">
+  <%= button_to "Continue Shopping", books_path, method: :get, class: 'btn btn-warning' %>
   </div>
-  </div>
+</div>
 </div>
  <% end %>
+
 <% end %>
-</div>
+
 </div>
