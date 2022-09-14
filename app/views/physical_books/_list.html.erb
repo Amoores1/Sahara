@@ -3,26 +3,26 @@
 
 
 <div class="info-list-results">
-<h2 class = "physical-book-bookstore mt-3">There are <%= sum %> copies of <%= book.title %> near you:</h2>
+  <h2 class = "physical-book-bookstore mt-3">There are <%= sum %> copies of <%= book.title %> near you:</h2>
 
-<% if available_books.exists? %>
-<% available_books.group_by {|b| b.bookstore }.each do |bookstore, bookstore_books|%>
+  <% if available_books.exists? %>
+  <% available_books.group_by {|b| b.bookstore }.each do |bookstore, bookstore_books|%>
 
   <% bookstore_books.each do |physical_book| %>
-  <hr>
+    <hr>
     <div class = "physical-book-bookstore">
       <p>
-      <strong><%= bookstore.name %></strong>
+        <strong><%= bookstore.name %></strong>
       </p>
       <p>
-      <%= bookstore.address %>
+        <%= bookstore.address %>
       </p>
       <p>
-      <%= physical_book.condition %>
+        <%= physical_book.condition %>
       </p>
       <div class="d-flex">
       <p>
-      <strong>£<%= physical_book.stripe_price%></strong>
+        <strong>£<%= physical_book.stripe_price%></strong>
       </p>
       <div style="width:20px"></div>
       <%= button_to physical_book_basket_items_path(physical_book), method: :post do %>
@@ -31,9 +31,10 @@
       </div>
    </div>
    <hr>
+  </div>
+ <% end %>
+ <% end %>
+  <% else %>
+    <p>There are no books...</p>
   <% end %>
-  <% end %>
-<% else %>
-  <p>There are no books...</p>
-<% end %>
 </div>
