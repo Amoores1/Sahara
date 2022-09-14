@@ -36,12 +36,13 @@ html_doc.search(".booktitle > .results").each do |element|
 
   # genres = ["Adventure", "Childrens", "Classic", "Crime", "Fantasy", "Fiction",
   #   "Horror","Non-fiction", "Science Fiction", "Graphic Novel", "Epic Novel", "Romance"]
+  # /(Adventure|Childrens|Classic|Crime|FANTASY|Fiction|Horror|Non-fiction|Science Fiction|Graphic Novel|Epic Novel|Romance)/
 
   unless html.search(".clamp a").children&.text == nil
-    genre_match = (html.search(".clamp a").children&.text).upcase.match(/(Adventure|Childrens|Classic|Crime|FANTASY|Fiction|Horror|Non-fiction|Science Fiction|Graphic Novel|Epic Novel|Romance)/
+    genre_match = (html.search(".clamp a").children&.text).upcase.match(/(ADVENTURE|CHILDRENS|CLASSIC|CRIME|FANTASY|FICTION|HORROR|NON-FICTION|SCIENCE FICTION|GRAPHIC NOVEL|EPIC NOVEL|ROMANCE)/
     ) # Either a match or nil
     if genre_match != nil
-      p genre_match.text
+      puts genre_match[0].capitalize
     end
   end
 
