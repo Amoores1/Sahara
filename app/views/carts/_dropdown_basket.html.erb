@@ -7,7 +7,7 @@
         </div>
         <div class="individual-basket-item">
           <p><%= basket_item.physical_book.book.title %></p>
-          <p>£<%= basket_item.physical_book.price %></p>
+          <p>£<%= basket_item.physical_book.stripe_price %></p>
         </div>
         <hr>
       </div>
@@ -17,7 +17,7 @@
       <%= button_to "Continue Shopping", books_path, method: :get, class: 'btn btn-success', id:"checkout-buttons-left" %>
     </div>
     <div class="checkout-buttons">
-      <%= button_to "Go to Checkout", new_order_path(@current_cart), method: :get, class: 'btn btn-warning' , id:"checkout-buttons-right" %>
+      <%= button_to "Go to Checkout", orders_path(@current_cart), method: :post, class: 'btn btn-warning', id:"checkout-buttons-right" %>
     </div>
   </div>
 </div>

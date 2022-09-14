@@ -5,6 +5,7 @@ class Order < ApplicationRecord
   has_many :basket_items, dependent: :destroy
 
   after_save :set_total_price
+  monetize :amount_cents
 
   private
 

@@ -3,6 +3,7 @@ class PhysicalBook < ApplicationRecord
   belongs_to :bookstore
 
   has_many :basket_items, dependent: :destroy
+  monetize :stripe_price_cents
 end
 
 # physical = PhysicalBook.first
