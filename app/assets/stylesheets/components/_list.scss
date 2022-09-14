@@ -1,9 +1,12 @@
 .info-list-results {
-  background-color: #FCECDD;
+  background-color: white;
+  padding: 0 10px;
 }
 .physical-book-bookstore {
-  color: #FEA82F;
-  transition: color .9s ease-in-out;
+  color: #0E0000;
+  padding: 5px 72px;
+  // background: rgb(255,251,241);
+  // background: linear-gradient(0deg, rgba(253,240,227,1) 0%, rgba(255,251,241,1) 5%, rgba(255,251,241,1) 95%, rgba(252,236,222,1) 100%);
 }
 em:hover {
   color: #FF6701;
