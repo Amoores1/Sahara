@@ -159,14 +159,14 @@ require "nokogiri"
 # book22.save!
 # puts "Generated book"
 
-# total_bookstores = []
+total_bookstores = []
 
-# total_bookstores << bookstore1
-# total_bookstores << bookstore2
-# total_bookstores << bookstore3
-# total_bookstores << bookstore4
-# total_bookstores << bookstore5
-# total_bookstores << bookstore6
+total_bookstores << bookstore1
+total_bookstores << bookstore2
+total_bookstores << bookstore3
+total_bookstores << bookstore4
+total_bookstores << bookstore5
+total_bookstores << bookstore6
 
 total_books = []
 
