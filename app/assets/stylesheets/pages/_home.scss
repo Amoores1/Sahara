@@ -30,4 +30,6 @@
 
 .no-white-box {
   margin: auto !important;
+  overflow: hidden;
+  max-height: 100vh;
 }

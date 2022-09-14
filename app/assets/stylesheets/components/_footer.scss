@@ -1,22 +1,13 @@
 body {
-  background: white;
   font-family: 'Lucida Sans';
-  background-image: url(books.jpg);
-  width: 100vw;
 }
 
 footer {
+  width: 100vw;
+  background-image: url(books.jpg);
   bottom: 0;
   left: 0;
   right: 0;
-
-  // background: rgb(131, 129, 129);
-
-
-
-  // background: #FCECDD;
-
-  opacity: .7;
   height: auto;
   width: 100%;
   padding-top: 20px;
