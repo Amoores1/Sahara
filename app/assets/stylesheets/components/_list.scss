@@ -22,14 +22,11 @@ em:hover {
   color: black;
 }
 
-// .price-basket{
-//   display: flex;
-// }
+.price-basket{
+  display: flex;
+  justify-content: space-between;
+}
 button {
-  // margin-right: 3px;
-  // display: flex;
-  // align-items: center;
-  // justify-content: right;
   appearance: none;
   background-color: #FCFCFD;
   border-radius: 4px;
@@ -50,7 +47,7 @@ button {
   touch-action: manipulation;
   white-space: nowrap;
   will-change: box-shadow,transform;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 button:focus {

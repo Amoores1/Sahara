@@ -12,17 +12,17 @@
     <hr>
       <div class = "physical-book-bookstore">
         <p>
-        <strong><%= bookstore.name %></strong>
+         <strong><%= bookstore.name %></strong>
         </p>
         <p>
-        <%= bookstore.address %>
+          <%= bookstore.address %>
         </p>
         <p>
-        <%= physical_book.condition %>
+          <%= physical_book.condition %>
         </p>
         <div class="price-basket d-flex">
           <p>
-          <strong>£<%= physical_book.price %></strong>
+            <strong>£<%= physical_book.price %></strong>
           </p>
           <div>
             <%= button_to physical_book_basket_items_path(physical_book), method: :post do %>
