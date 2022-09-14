@@ -19,7 +19,11 @@
 
 
   <body>
+  <% if current_page?(root_path) %>
    <div class="d-flex flex-column min-vh-100 no-white-box">
+  <% else %>
+   <div class="d-flex flex-column min-vh-100">
+  <% end %>
       <%= render 'shared/navbar' %>
       <%= render 'shared/flashes' %>
       <article class="flex-grow-1">
