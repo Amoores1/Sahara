@@ -37,3 +37,15 @@
   border: 0px solid transparent;
   z-index: 1;
 }
+
+.mapboxgl-popup-close-button {
+  color: #0E0000;
+  border: #0E0000;
+  font-size: large;
+}
+.mapboxgl-popup-close-button:hover {
+  color: #0E0000;
+  background-color: white;
+  border: #0E0000;
+  font-size: x-large;
+}
