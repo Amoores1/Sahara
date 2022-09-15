@@ -2,22 +2,26 @@ body {
   font-family: 'Lucida Sans';
 }
 
-footer {
+.footer-content {
   width: 100vw;
   background-image: url(books.jpg);
   bottom: 0;
   left: 0;
   right: 0;
   height: auto;
-  padding-top: 20px;
-  color: #ea9143;
-}
-.footer-content {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   text-align: center;
+  font-family: 'Open Sans', sans-serif !important;
+  padding-top: 20px;
+  color: #ff8d19;
+  // opacity: .7;
+  letter-spacing: 1px;
+  h6{
+    color:#ff8d19
+  }
 }
 .footer-content h3 {
   font-size: 2.7rem;
@@ -31,14 +35,13 @@ footer {
   font-size: 16px;
   color: #ea9143;
   lighting-color: black;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  font-family: 'Open Sans', sans-serif !important;
 }
 .socials {
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1rem 0 1rem 0;
 }
 .socials i {
   margin: 10px;
@@ -66,7 +69,7 @@ footer {
   float: left;
   font-size: 24px;
   word-spacing: 2px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 .footer-bottom p a {
 color:orange;
@@ -92,10 +95,10 @@ text-decoration: none;
 color: orange;
 }
 
-@media (max-width:500px) {
-  .footer-menu ul {
-  display: flex;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  }
-}
+// @media (max-width:500px) {
+//   .footer-menu ul {
+//   display: flex;
+//   margin-top: 10px;
+//   margin-bottom: 20px;
+//   }
+// }

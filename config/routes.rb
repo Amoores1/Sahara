@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get 'orders/index'
-  get 'orders/show'
-  get 'orders/new'
+  get 'errors/not_found'
+  get 'errors/internal_server_error'
   get 'carts/show'
   devise_for :users
   root to: "pages#home"
@@ -26,6 +25,11 @@ Rails.application.routes.draw do
   get 'basket_items/:id' => "basket_items#show", as: "basket_item"
   delete 'basket_items/:id' => "basket_items#destroy"
 
-  resources :orders
+  resources :orders do
+    resources :payments, only: :new
+  end
+
+  match "/404", to: "errors#not_found", via: :all
+  match "/500", to: "errors#internal_server_error", via: :all
 
 end

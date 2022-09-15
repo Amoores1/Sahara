@@ -5,6 +5,7 @@ class Order < ApplicationRecord
   has_many :basket_items, dependent: :destroy
 
   after_save :set_total_price
+  monetize :amount_cents
 
   private
 
@@ -13,6 +14,7 @@ class Order < ApplicationRecord
   end
 
   def total
-    basket_items.sum{|item| item.physical_book.price }
+    # raise
+    basket_items.sum{|item| item.physical_book.stripe_price_cents  }
   end
 end

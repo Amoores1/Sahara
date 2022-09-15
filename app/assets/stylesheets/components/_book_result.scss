@@ -1,7 +1,8 @@
 .index-wrapper{
   display: flex;
   padding: 10px 150px 10px 150px;
-  background-color: rgb(255, 251, 241);
+  background-color: #f5f5f5;
+
 }
 
 .list-container {
@@ -28,11 +29,11 @@
   background-size: cover;
   background-position: center;
   border-radius: 5px;
-  transition: transform .4s; // Animation
+  transition: transform .3s; // Animation
 }
 
 .book-image:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 .info-and-price {
@@ -57,10 +58,9 @@
 
 .book-filters {
   width: 20vw;
-  margin: 0 30px;
+  margin: 15px 30px;
   display: flex;
   flex-direction: column;
-  background-color: rgb(255, 249, 233);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   position: sticky;
   right: 0;
@@ -72,12 +72,10 @@
   // max-height: fit-content;
   top: 20px;
   bottom :20px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f5f5f5;
 }
 
-.filter-options {
-  margin-left: 16px;
-  padding: 20px;
-}
 
 .sub-option-container {
   margin-left: 10px;
@@ -97,4 +95,12 @@
 
 .input-year {
   max-width: 100px;
+}
+
+
+.filter-options {
+  width: 100%;
+  padding: 20px 20px 20px 20px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f5f5f5;
 }

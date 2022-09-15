@@ -1,9 +1,10 @@
 .navbar-lewagon {
   justify-content: space-between;
   // background: white;
-  background:white;
+  background: white;
   height: 60px !important;
   align-items: center;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -30,13 +31,16 @@
 
 .brand-title{
   padding-left: 10px;
-  padding-bottom: 3px;
-  font-weight:lighter;
+  padding-top: 16px;
+  // padding-bottom: 2px;
+  font-weight: 300;
   position: absolute;
   left: 100%;
-  bottom: 8px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  // bottom: 4px;
+  font-family: 'Roboto', sans-serif;
   color: #262626;
+  letter-spacing: 6px;
+  font-size: 35px;
 }
 #bigbar{
   width: 35vw;
@@ -49,6 +53,7 @@
 
 #search-bar-home{
   border-radius: 30px 0px 0px 30px;
+  opacity: .7;
 
 // background: linear-gradient(99deg, rgba(252,236,221,1) 10%, rgba(255,194,136,1) 57%, rgba(254,168,47,1) 100%);
 
@@ -57,7 +62,27 @@
 
 #button-search {
   border-radius: 0px 30px 30px 0px;
+  color: #262626;
+  font-weight: bold;
+  background: linear-gradient(#ffb366, #ff8d19);
+  --bs-btn-border-color: unset;
+  i {
+    margin-right: 3px;
+  }
 }
+
+#button-drop {
+  color: #262626;
+  padding: 8px 24px;
+  border-radius: 4px !important;
+  font-weight: 600;
+  background: linear-gradient(#ffb366, #ff8d19);
+  font-family: 'Open Sans', sans-serif;
+  background-color: unset;
+  --bs-btn-border-color: unset;
+  margin-left: 2px;
+
+  }
 
 // background: linear-gradient(0deg, rgba(252,211,93,1) 0%, rgba(221,151,0,1) 100%);
 

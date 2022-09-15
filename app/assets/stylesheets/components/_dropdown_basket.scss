@@ -5,13 +5,15 @@
 
 #basket-box{
   width: 300px;
-  padding: 10px 0;
+  padding: 10px 10px 10px 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   position: absolute;
   background-color: white;
   left: auto !important;
   right: 0px;
   border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+
 }
 
 .basket-item{
@@ -22,20 +24,6 @@
   hr{
     width:100%
   }
-}
-
-.basket-item:hover{
-  div{
-    #no-no-bootstrap {
-      visibility: visible;
-      cursor: pointer;
-    }
-  }
-}
-
-.remove-button {
-  display: flex;
-  justify-content: flex-end;
 }
 
 #no-no-bootstrap {
@@ -51,9 +39,40 @@
   margin-bottom: 5px;
 }
 
-.physical-book-bookstore{
-  margin-left: 20px;
+.basket-item:hover{
+  .remove-button{
+    #no-no-bootstrap {
+      visibility: visible;
+      cursor: pointer;
+    }
+  }
 }
+
+#payment-physical-book{
+  div{
+    #no-no-no-bootstrap {
+      visibility: visible !important;
+      cursor: pointer;
+      background: red;
+      padding: 3px;
+      border-radius: 3px;
+      color: white;
+      width: 18px;
+      text-align: center;
+      text-decoration: none;
+      margin-bottom: 5px;
+      height: 25px;
+      // background: white;
+    }
+  }
+}
+
+.remove-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
 
 .individual-basket-item {
   display:flex;
@@ -64,15 +83,44 @@
 }
 
 #checkout-buttons-left{
-  border-radius: 6px 0px 0px 6px !important;
+  color: #413F42;
+  padding: 8px 24px;
+  border-radius: 4px !important;
+  font-weight: 600;
+  background: linear-gradient(#ffb366, #ff8d19);
+  font-family: 'Open Sans', sans-serif;
+  --bs-btn-border-color: unset;
+  margin-right: 2px;
+
+
+
+
+
 }
 #checkout-buttons-right{
-  border-radius: 0px 6px 6px 0px !important;
+  color: #413F42;
+  padding: 8px 24px;
+  border-radius: 4px !important;
+  font-weight: 600;
+  background: linear-gradient(#ffb366, #ff8d19);
+  font-family: 'Open Sans', sans-serif;
+  background-color: unset;
+  --bs-btn-border-color: unset;
+  margin-left: 2px;
+
+
 }
 .checkout-buttons{
   width:50%;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.button .btn .btn-warning .dropdown-toggle {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+#checkout-buttons-left:hover {
+  background: linear-gradient(45deg, #ff8d19, #ffb366);
+  color: #262626;
+}
+
+#checkout-buttons-right:hover {
+  background: linear-gradient(45deg, #ff8d19, #ffb366);
+  color: #262626;
 }
