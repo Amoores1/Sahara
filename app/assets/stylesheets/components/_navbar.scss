@@ -66,6 +66,9 @@
   font-weight: bold;
   background: linear-gradient(#ffb366, #ff8d19);
   --bs-btn-border-color: unset;
+  i {
+    margin-right: 3px;
+  }
 }
 
 #button-drop {

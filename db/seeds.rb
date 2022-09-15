@@ -70,17 +70,17 @@ total_bookstores << bookstore6
 total_books = []
 
 authors = [
-  "https://openlibrary.org/authors/OL391839A/James_Baldwin",
-  "https://openlibrary.org/authors/OL23919A/J._K._Rowling",
-  "https://openlibrary.org/authors/OL27349A/F._Scott_Fitzgerald",
-  "https://openlibrary.org/authors/OL31353A/Ursula_K._Le_Guin",
-  "https://openlibrary.org/authors/OL26320A/J.R.R._Tolkien",
-  "https://openlibrary.org/authors/OL2162284A/Stephen_King",
-  "https://openlibrary.org/authors/OL20187A/Kurt_Vonnegut",
-  "https://openlibrary.org/authors/OL118077A/George_Orwell",
-  "https://openlibrary.org/authors/OL13640A/Ernest_Hemingway",
-  "https://openlibrary.org/authors/OL24638A/Charles_Dickens",
-  "https://openlibrary.org/authors/OL23919A/J._K._Rowling",
+  # "https://openlibrary.org/authors/OL391839A/James_Baldwin",
+  # "https://openlibrary.org/authors/OL23919A/J._K._Rowling",
+  # "https://openlibrary.org/authors/OL27349A/F._Scott_Fitzgerald",
+  # "https://openlibrary.org/authors/OL31353A/Ursula_K._Le_Guin",
+  # "https://openlibrary.org/authors/OL26320A/J.R.R._Tolkien",
+  # "https://openlibrary.org/authors/OL2162284A/Stephen_King",
+  # "https://openlibrary.org/authors/OL20187A/Kurt_Vonnegut",
+  # "https://openlibrary.org/authors/OL118077A/George_Orwell",
+  # "https://openlibrary.org/authors/OL13640A/Ernest_Hemingway",
+  # "https://openlibrary.org/authors/OL24638A/Charles_Dickens",
+  # "https://openlibrary.org/authors/OL23919A/J._K._Rowling",
   "https://openlibrary.org/authors/OL234664A/George_R._R._Martin"
 ]
 
