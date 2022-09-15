@@ -1,9 +1,7 @@
 <div class="container">
   <div class="row py-4">
     <div class="col">
-      <h1>Checkout summary</h1>
-      <%# <p>Purchase of <strong><%= @order.basket_items.first.physical_book.title %>
-      <%# # %# </strong> for <strong><%= humanized_money_with_symbol @order.amount</strong></p>  %>
+        <h1>Checkout summary</h1>
       <button id="pay" class="btn btn-primary">Pay</button>
 
       <script src="https://js.stripe.com/v3/"></script>
@@ -18,4 +16,46 @@
       </script>
     </div>
   </div>
+</div>
+
+<div id="checkout-container">
+  <div id ="checkout-card">
+    <%  @order.basket_items.each do |item| %>
+    <hr>
+      <div id="payment-physical-book">
+        <div class="payment-book-photo">
+        <%= image_tag(item.physical_book.book.photo)%>
+        </div>
+
+      <div class="payment-book-info">
+        <p><strong><%=item.physical_book.book.title %> </strong> </p>
+        <p>
+         <%= item.physical_book.bookstore.name %>
+        </p>
+        <p>
+          <%= item.physical_book.bookstore.address %>
+        </p>
+        <p>
+          <%= item.physical_book.condition %>
+        </p>
+          <p>
+            <strong>£<%= item.physical_book.stripe_price %></strong>
+          </p>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+
+
+    <div id="checkout-details">
+
+      <h3>Subtotal</h3>
+      <% total = 0 %>
+      <%  @order.basket_items.each do |item| %>
+      <% item.physical_book.stripe_price %>
+      <% total = total + item.physical_book.stripe_price  %>
+      <% end %>
+      £<%= total %>
+    </div>
 </div>

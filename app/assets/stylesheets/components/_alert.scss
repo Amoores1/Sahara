@@ -4,3 +4,29 @@
   right: 16px;
   z-index: 1000;
 }
+
+
+
+#payment-physical-book {
+  display: flex;
+  margin-left: 300px;
+
+  img {
+    padding-right: 100px;
+  }
+}
+
+
+#checkout-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#checkout-details {
+  padding-top: 20px;
+  padding-left: 60px;
+}
+
+// #checkout-card {
+//   margin-left: 230px;
+// }
