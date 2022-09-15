@@ -14,6 +14,7 @@ class Order < ApplicationRecord
   end
 
   def total
-    basket_items.sum{|item| item.physical_book.price }
+    # raise
+    basket_items.sum{|item| item.physical_book.stripe_price_cents  }
   end
 end

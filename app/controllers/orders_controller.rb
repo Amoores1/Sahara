@@ -41,7 +41,7 @@ class OrdersController < ApplicationController
       payment_method_types: ['card'],
       line_items: stripe_line_items,
       mode: "payment",
-      success_url: order_url(@order),
+      success_url: orders_url,
       cancel_url: order_url(@order)
     )
 
