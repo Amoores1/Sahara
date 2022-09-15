@@ -1,50 +1,56 @@
 <div class="orders">
 
 
-<% @orders.each do |order| %>
+  <% @orders.each do |order| %>
 
-<div class="order-container">
+  <div class="order-container">
+    <%# <div class="order-whole-sale"> %>
 
-<div class="order-description">
-<div class="order-box">
-<p> Order number: <%= order.id %> </p>
-</div>
-<div class="box-2">
-<p> Order placed: <%= order.created_at %> </p>
-</div>
-<div class="box-3">
-<%# <p> Order total: £<%= order.total_price.number_to_price() %>
-<p> Order total: <%= humanized_money_with_symbol(order.total_price/100.to_f) %> </p>
-</div>
-</div>
- <%  order.basket_items.each do |basket| %>
+    <div class="order-description">
+    <div class="order-box">
+    <p> Order number: <%= order.id %> </p>
+    </div>
+    <div class="box-2">
+    <p> Order placed: <%= order.created_at %> </p>
+    </div>
+    <div class="box-3">
+    <%# <p> Order total: £<%= order.total_price.number_to_price() %>
+    <p> Order total: <%= humanized_money_with_symbol(order.total_price/100.to_f) %> </p>
+    </div>
+    </div>
+    <%  order.basket_items.each do |basket| %>
 
- <div class="order-overview">
+    <div class="order-overview">
 
 
 
-<div class="left-box">
-  <%= image_tag(basket.physical_book.book.photo, class: "book-image")%>
-  </div>
-  <div class="center-box">
-    <ul><%= basket.physical_book.book.title %>
-    </ul>
-  </div>
-  <div class="right-box">
-   <br>
-   <br>
-   <br>
-  <div class="item-one">
-  <%= button_to "View this book", book_path(basket.physical_book.book), method: :get, class: 'btn btn-warning' %>
-  </div>
-   <br>
-  <div class="item-two">
-  <%= button_to "Continue Shopping", books_path, method: :get, class: 'btn btn-warning' %>
-  </div>
-</div>
-</div>
- <% end %>
+    <div class="left-box">
+      <%= image_tag(basket.physical_book.book.photo, class: "book-image")%>
+      </div>
+      <div class="center-box">
+        <ul>
+            <strong><%= basket.physical_book.book.title %></strong>
+            <br>
+            <%= basket.physical_book.bookstore.name %>
+            <br>
+            <%= basket.physical_book.bookstore.address %>
+        </ul>
+      </div>
+      <div class="right-box" style="align-items:center">
+      <br>
+      <br>
+      <br>
+      <div class="item-one">
+      <%= button_to "View this book", book_path(basket.physical_book.book), method: :get, class: 'btn btn-warning', id:"order-button" %>
+      </div>
+      <br>
 
-<% end %>
+    </div>
+    </div>
+
+    <%# </div> %>
+    <% end %>
+
+    <% end %>
 
 </div>
