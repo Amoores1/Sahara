@@ -53,10 +53,10 @@ bookstore6 = Bookstore.new(address: "207-209 Kentish Town Rd, London NW5 2JU, Un
 bookstore6.save!
 puts "generated bookstore"
 
-book22 = Book.new(title: "November 9", author: "Colleen Hoover", year: "2015", genre: "Fiction")
-book22.photo.attach(io: URI.open("https://covers.openlibrary.org/b/olid/OL27198876M-M.jpg"), filename: "david.jpg", content_type: "image/jpg")
-book22.save!
-puts "Generated book"
+# book22 = Book.new(title: "November 9", author: "Colleen Hoover", year: "2015", genre: "Fiction")
+# book22.photo.attach(io: URI.open("https://covers.openlibrary.org/b/olid/OL27198876M-M.jpg"), filename: "david.jpg", content_type: "image/jpg")
+# book22.save!
+# puts "Generated book"
 
 total_bookstores = []
 
@@ -70,8 +70,20 @@ total_bookstores << bookstore6
 total_books = []
 
 authors = [
-  "https://openlibrary.org/authors/OL23919A/J._K._Rowling"
+  "https://openlibrary.org/authors/OL391839A/James_Baldwin",
+  "https://openlibrary.org/authors/OL23919A/J._K._Rowling",
+  "https://openlibrary.org/authors/OL27349A/F._Scott_Fitzgerald",
+  "https://openlibrary.org/authors/OL31353A/Ursula_K._Le_Guin",
+  "https://openlibrary.org/authors/OL26320A/J.R.R._Tolkien",
+  "https://openlibrary.org/authors/OL2162284A/Stephen_King",
+  "https://openlibrary.org/authors/OL20187A/Kurt_Vonnegut",
+  "https://openlibrary.org/authors/OL118077A/George_Orwell",
+  "https://openlibrary.org/authors/OL13640A/Ernest_Hemingway",
+  "https://openlibrary.org/authors/OL24638A/Charles_Dickens",
+  "https://openlibrary.org/authors/OL23919A/J._K._Rowling",
+  "https://openlibrary.org/authors/OL234664A/George_R._R._Martin"
 ]
+
 queries = ["the lord of the rings", "harry", "war"]
 authors.each do |url|
   # url = "https://openlibrary.org/search?q=#{query}&mode=everything"
