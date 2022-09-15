@@ -30,13 +30,13 @@
 
 .p404:first-of-type { margin-top: 4em; }
 
-p > a {
+#try404 {
   border-bottom: 1px dashed #216f79;
   font-style: italic;
   text-decoration: none;
   color: #216f79;
 }
 
-.p404 > a:hover { text-shadow: 0 0 6px #216f79; }
+#try404:hover { text-shadow: 0 0 6px #216f79; }
 
 .p404 img { vertical-align: bottom; }
