@@ -4,17 +4,27 @@
 }
 
 .card-book-title {
-   padding-top: 80px !important;
+   padding-top: 70px !important;
    align-items: center;
    font-family: 'Open Sans', sans-serif;
 }
 
+.physical-book-bookstore-top {
+  color: #262626;
+  padding: 15px 45px 0 20px;
+  margin-left: 25px;
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
 .physical-book-bookstore {
   color: #262626;
-  padding: 5px 5px;
+  padding: 25px 15px;
   font-family: 'Open Sans', sans-serif;
-  margin-left: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+
 em:hover {
   color: #FF6701;
   lighting-color: white;
@@ -24,6 +34,21 @@ em:hover {
 .basket {
   color: #FF6701;
   border-radius: 50%;
+}
+
+.btn-test {
+  margin-top: 7px;
+  color: #413F42 !important;
+  border-radius: 4px !important;
+  box-shadow: unset !important;
+  font-weight: 600 !important;
+  background: linear-gradient(#ffb366, #ff8d19) !important;
+  font-family: 'Open Sans', sans-serif !important;
+  background-color: unset;
+  --bs-btn-border-color: unset;
+  font-size: 14px !important;
+  padding: 8px 24px;
+
 }
 
 .bookstore-name {

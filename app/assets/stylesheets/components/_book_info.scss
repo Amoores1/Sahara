@@ -71,8 +71,8 @@
   margin-left: 30px;
 }
 .card .image {
-  width: 100%;
-  height: 100%;
+  width: 200px !important;
+  height: 290px !important;
   overflow: hidden;
   border: transparent;
   background: #f5f5f5;
@@ -97,6 +97,8 @@
   height: 100%;
   background: linear-gradient(45deg, #262626, #555555);
   color: white;
+  width: 200px !important;
+  height: 100% !important;
 
 
   // background-image: url(https://as1.ftcdn.net/v2/jpg/02/98/52/58/1000_F_298525880_fZUw5GhaqCLIDYBzY7beoYZp7R1J6wqc.jpg);
@@ -135,7 +137,7 @@
   margin: 10px 0;
 }
 .card .details .center h5 {
-  margin: 5px 0;
+  margin: 10px 0;
   text-align: left;
   color: #f5f5f5;
   font-family: 'Open Sans', sans-serif;
