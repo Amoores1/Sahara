@@ -2,18 +2,6 @@
   <div class="row py-4">
     <div class="col">
         <h1>Checkout summary</h1>
-      <button id="pay" class="btn btn-primary">Pay</button>
-
-      <script src="https://js.stripe.com/v3/"></script>
-      <script>
-        const paymentButton = document.getElementById('pay');
-        paymentButton.addEventListener('click', () => {
-          const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
-          stripe.redirectToCheckout({
-            sessionId: '<%= @order.checkout_session_id %>'
-          });
-        });
-      </script>
     </div>
   </div>
 </div>
@@ -41,7 +29,12 @@
           <p>
             <strong>£<%= item.physical_book.stripe_price %></strong>
           </p>
+
       </div>
+      <div class="remove-button">
+          <%= link_to "X", basket_item_path(item), data: { "turbo-method": :delete }, id:"no-no-no-bootstrap" %>
+      </div>
+
     </div>
     <% end %>
     </div>
@@ -57,5 +50,18 @@
       <% total = total + item.physical_book.stripe_price  %>
       <% end %>
       £<%= total %>
+      <div id="payment-button">
+        <button id="pay" class="btn btn-primary">Pay</button>
+          <script src="https://js.stripe.com/v3/"></script>
+          <script>
+            const paymentButton = document.getElementById('pay');
+            paymentButton.addEventListener('click', () => {
+              const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+              stripe.redirectToCheckout({
+                sessionId: '<%= @order.checkout_session_id %>'
+              });
+            });
+          </script>
+        </div>
     </div>
 </div>
