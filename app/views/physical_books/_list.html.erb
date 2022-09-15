@@ -3,8 +3,7 @@
 
 
 <div class="info-list-results">
-  <h2 class = "physical-book-bookstore mt-3">There are <%= sum %> copies of <%= book.title %> near you:</h2>
-
+ 
   <% if available_books.exists? %>
   <% available_books.group_by {|b| b.bookstore }.each do |bookstore, bookstore_books|%>
     <% bookstore_books.each do |physical_book| %>
