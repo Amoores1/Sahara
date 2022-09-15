@@ -10,7 +10,8 @@ footer {
   right: 0;
   height: auto;
   padding-top: 20px;
-  color: #ea9143;
+  color: #ff8d19;
+  font-family: 'Open Sans', sans-serif !important;
 }
 .footer-content {
   display: flex;
@@ -18,6 +19,13 @@ footer {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  font-family: 'Open Sans', sans-serif !important;
+  padding-top: 45px;
+  color: #ff8d19;
+  opacity: .7;
+  letter-spacing: 1px;
+
+
 }
 .footer-content h3 {
   font-size: 2.7rem;
@@ -31,7 +39,7 @@ footer {
   font-size: 16px;
   color: #ea9143;
   lighting-color: black;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  font-family: 'Open Sans', sans-serif !important;
 }
 .socials {
   list-style: none;
@@ -66,7 +74,7 @@ footer {
   float: left;
   font-size: 24px;
   word-spacing: 2px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 .footer-bottom p a {
 color:orange;

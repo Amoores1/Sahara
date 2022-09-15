@@ -1,14 +1,14 @@
 <div class="book-filters" data-controller="potato" >
   <div class="filter-options">
     <div class="filter-headers">
-      <h4>Filter by</h4>
+      <h5>Filter by</h5>
       <p><%= link_to "Reset", books_path(query: params[:query]) %></p>
     </div>
     <hr>
 
     <div class="filter-title" data-action="click->potato#revealGenres">
       <i class="fa-solid fa-caret-right" data-potato-target="genrecaret"></i>
-      <h5>Genre</h5>
+      <h6>Genre</h6>
     </div>
     <div class="sub-option-container d-none" data-potato-target="genres">
       <p><%= link_to "Adventure", request.params.merge(genre: "adventure") %></p>
@@ -28,7 +28,7 @@
 
   <div class="filter-title" data-action="click->potato#revealYear">
     <i class="fa-solid fa-caret-right" data-potato-target="yearcaret"></i>
-    <h5>Year</h5>
+    <h6>Year</h6>
   </div>
   <div data-potato-target="year" class="sub-option-container d-none">
     <form action="<%= request.url %>" method="GET" id ="year-container" data-controller="filter-date" data-action="submit->filter-date#applyFilter">

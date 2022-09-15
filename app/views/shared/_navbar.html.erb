@@ -2,7 +2,7 @@
   <%= link_to root_path do %>
     <div class="d-flex align-items-center navbar-brand">
       <%= image_tag "night_logo.png" %>
-      <h3 class="brand-title">  S A H A R A</h3>
+      <h3 class="brand-title">  SAHARA</h3>
     </div>
   <% end %>
 
@@ -16,7 +16,7 @@
           params[:query],
           class: "form-control",
           id: "search-bar",
-          placeholder: "Harry Potter, Game of Thrones, Coding for Dummies"
+          placeholder: "Search for a book..."
         %>
         <%= button_tag(type: "submit", class: "btn btn-outline-warning", id:"button-search") do %>
           <i class="fa-solid fa-magnifying-glass"></i>
@@ -34,7 +34,7 @@
       <% if user_signed_in? %>
         <li class="nav-item active">
           <div class="dropdown basket-parent">
-            <button class="btn btn-warning dropdown-toggle"  type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-warning dropdown-toggle"  type="button" data-bs-toggle="dropdown" aria-expanded="false" id="button-drop">
             <i class="fa fa-shopping-cart"></i>
             (<%= @current_cart.basket_items.count %>)
             </button>
@@ -47,7 +47,7 @@
         <li class="nav-item dropdown user-image">
           <%= image_tag "avatar.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <%= link_to "Your orders", orders_path, class: "dropdown-item" %>
+           <%= link_to "Your orders", orders_path, class: "dropdown-item" %>
             <%# <%= link_to "Bookstores", bookstores_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
           </div>

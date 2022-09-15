@@ -2,6 +2,7 @@
   display: flex;
   padding: 10px 0 10px 0;
   width: 100vw;
+  background: #f5f5f5;
 }
 
 .index-wrapper2 {
@@ -19,7 +20,7 @@
   border-left: 5px;
   padding: 5px 0 5px 0;
   overflow-y: scroll;
-  background-color: white;
+  background: #f5f5f5;
   font-family: 'Lucida Sans'
 }
 .box-card {
@@ -72,6 +73,7 @@
   height: 100%;
   overflow: hidden;
   border: transparent;
+  background: #f5f5f5;
   // box-shadow: 0 1px 4px rgba(0,0,0,0.5),
   // 0 0 12px rgba(0,0,0,0.3),
   // 0 0 15px rgba(0,0,0,0.2);
