@@ -1,11 +1,12 @@
 .filter-title {
   display:flex;
-  h5 {
-    margin: 0 0 0 5px !important;
+  h6 {
+    margin: 0!important;
   }
   i {
     display: flex;
     align-items: center;
+    padding-bottom: 2px;
   }
 }
 
@@ -28,6 +29,14 @@
   justify-content: space-between;
   h4 {
     margin: 0 !important;
+  }
+  p{
+    a{
+      color: #ff8d19 !important;
+    }
+  }
+  hr{
+    margin:auto !important;
   }
 }
 

@@ -26,12 +26,24 @@
   }
 }
 
+#no-no-bootstrap {
+  visibility: hidden;
+  font-size: 9px;
+  background: red;
+  padding: 3px;
+  border-radius: 3px;
+  color: white;
+  width: 18px;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
 .basket-item:hover{
-  div{
+  .remove-button{
     #no-no-bootstrap {
       visibility: visible;
       cursor: pointer;
-      // background: white;
     }
   }
 }
@@ -60,18 +72,6 @@
   justify-content: flex-end;
 }
 
-#no-no-bootstrap {
-  visibility: hidden;
-  font-size: 9px;
-  background: red;
-  padding: 3px;
-  border-radius: 3px;
-  color: white;
-  width: 18px;
-  text-align: center;
-  text-decoration: none;
-  margin-bottom: 5px;
-}
 
 .physical-book-bookstore{
   margin-left: 20px;
