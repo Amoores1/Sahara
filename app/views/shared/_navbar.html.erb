@@ -11,7 +11,7 @@
 
   <% else  %>
     <div class="nav-item">
-      <%= form_with url: books_path, method: :get, class: "rounded d-flex input-group", id:"bigbar" do %>
+      <%= form_with url: books_path, method: :get, class: "rounded d-flex input-group", id:"bigbar", html: { autocomplete: "off" } do %>
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",

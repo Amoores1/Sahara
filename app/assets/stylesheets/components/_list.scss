@@ -1,6 +1,6 @@
 .info-list-results {
   background: #f5f5f5;
-  padding: 0 10px 0 35px;
+  padding: 0 10px 0 0;
 }
 
 .card-book-title {
@@ -95,4 +95,8 @@ em:hover {
 .price-basket button:active {
   box-shadow: #D6D6E7 0 3px 7px inset;
   transform: translateY(2px);
+}
+
+.basket-button {
+  margin-right:20px;
 }
