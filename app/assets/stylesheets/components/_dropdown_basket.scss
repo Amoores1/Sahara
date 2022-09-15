@@ -26,22 +26,6 @@
   }
 }
 
-.basket-item:hover{
-  div{
-    #no-no-bootstrap {
-      visibility: visible;
-      cursor: pointer;
-      background: white;
-    }
-  }
-}
-
-
-.remove-button {
-  display: flex;
-  justify-content: flex-end;
-}
-
 #no-no-bootstrap {
   visibility: hidden;
   font-size: 9px;
@@ -54,6 +38,22 @@
   text-decoration: none;
   margin-bottom: 5px;
 }
+
+.basket-item:hover{
+  .remove-button{
+    #no-no-bootstrap {
+      visibility: visible;
+      cursor: pointer;
+    }
+  }
+}
+
+
+.remove-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
 
 .physical-book-bookstore{
   margin-left: 20px;
