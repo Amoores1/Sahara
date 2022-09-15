@@ -3,7 +3,7 @@
 
 
 <div class="info-list-results">
- 
+
   <% if available_books.exists? %>
   <% available_books.group_by {|b| b.bookstore }.each do |bookstore, bookstore_books|%>
     <% bookstore_books.each do |physical_book| %>
@@ -23,7 +23,7 @@
             <strong>£<%= physical_book.stripe_price %></strong>
           </p>
           <div>
-            <%= button_to physical_book_basket_items_path(physical_book), method: :post do %>
+            <%= button_to physical_book_basket_items_path(physical_book), class:"basket-button", method: :post do %>
               Add to basket
             <% end %>
           </div>
