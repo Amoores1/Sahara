@@ -3,27 +3,22 @@
 
 
 <div class="info-list-results">
- 
+
   <% if available_books.exists? %>
   <% available_books.group_by {|b| b.bookstore }.each do |bookstore, bookstore_books|%>
     <% bookstore_books.each do |physical_book| %>
-    <hr>
+    <br>
       <div class = "physical-book-bookstore">
-        <p>
-         <strong><%= bookstore.name %></strong>
-        </p>
-        <p>
-          <%= bookstore.address %>
-        </p>
-        <p>
-          <%= physical_book.condition %>
-        </p>
+        <h4><strong><%= bookstore.name %></strong><br></h4>
+
+        <p><br><i>Where can you pick it up?</i><br><strong><%= bookstore.address %></strong></p>
+        <p><i>The quality of this book is </i><strong><%= physical_book.condition %></strong></p>
         <div class="price-basket d-flex">
           <p>
-            <strong>£<%= physical_book.stripe_price %></strong>
+            <i>Get it today for only:</i><br><strong>£<%= physical_book.stripe_price %></strong>
           </p>
           <div>
-            <%= button_to physical_book_basket_items_path(physical_book), method: :post do %>
+            <%= button_to physical_book_basket_items_path(physical_book), method: :post, class:"btn-test" do %>
               Add to basket
             <% end %>
           </div>
