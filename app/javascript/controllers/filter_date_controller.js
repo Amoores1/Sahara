@@ -10,6 +10,9 @@ export default class extends Controller {
   applyFilter (event) {
     event.preventDefault()
     let urlContent = window.location.search
+    if(urlContent == "") {
+      urlContent = "books?query=";
+    }
     const timeParamsRegex = /&from=\d+&to=\d+/
     let timeParams = `&from=${this.fromTarget.value}&to=${this.toTarget.value}`
     if (timeParamsRegex.test(urlContent)) {
@@ -23,8 +26,6 @@ export default class extends Controller {
     // would also like to keep filter option display open, may need to do in other controller.
     const fixedFrom = this.fromTarget.value
     const fixedTo = this.toTarget.value
-    console.log(fixedFrom)
-    console.log(fixedTo)
   }
 
 }

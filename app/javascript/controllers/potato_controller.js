@@ -4,7 +4,6 @@ export default class extends Controller {
   static targets = ["genres", "genrecaret", "year", "yearcaret", "condition", "conditioncaret"]
 
   connect() {
-    console.log("potato")
   }
   revealGenres() {
     this.genresTarget.classList.toggle("d-none")
