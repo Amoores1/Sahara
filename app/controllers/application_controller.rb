@@ -25,4 +25,10 @@ class ApplicationController < ActionController::Base
       session[:cart_id] = @current_cart.id
     end
   end
+
+  # For image absolute urls (meta)
+  # Make sure your production DOMAIN variable is set with your domain name.
+  def default_url_options
+    { host: ENV["DOMAIN"] || "localhost:3000" }
+  end
 end
