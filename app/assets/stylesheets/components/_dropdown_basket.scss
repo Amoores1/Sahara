@@ -31,11 +31,29 @@
     #no-no-bootstrap {
       visibility: visible;
       cursor: pointer;
-      background: white;
+      // background: white;
     }
   }
 }
 
+#payment-physical-book{
+  div{
+    #no-no-no-bootstrap {
+      visibility: visible !important;
+      cursor: pointer;
+      background: red;
+      padding: 3px;
+      border-radius: 3px;
+      color: white;
+      width: 18px;
+      text-align: center;
+      text-decoration: none;
+      margin-bottom: 5px;
+      height: 25px;
+      // background: white;
+    }
+  }
+}
 
 .remove-button {
   display: flex;
