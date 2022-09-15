@@ -13,7 +13,8 @@
 <p> Order placed: <%= order.created_at %> </p>
 </div>
 <div class="box-3">
-<p> Order total: £<%= order.total_price %> </p>
+<%# <p> Order total: £<%= order.total_price.number_to_price() %>
+<p> Order total: <%= humanized_money_with_symbol(order.total_price/100.to_f) %> </p>
 </div>
 </div>
  <%  order.basket_items.each do |basket| %>
