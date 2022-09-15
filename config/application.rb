@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module Sahara
   class Application < Rails::Application
+    config.load_defaults 7.0
+    config.exceptions_app = self.routes
     config.generators do |generate|
       generate.assets false
       generate.helper false
