@@ -80,7 +80,9 @@ authors = [
   # "https://openlibrary.org/authors/OL118077A/George_Orwell",
   # "https://openlibrary.org/authors/OL13640A/Ernest_Hemingway",
   # "https://openlibrary.org/authors/OL24638A/Charles_Dickens",
-  "https://openlibrary.org/authors/OL234664A/George_R._R._Martin"
+  "https://openlibrary.org/authors/OL234664A/George_R._R._Martin",
+  "https://openlibrary.org/authors/OL34184A/Roald_Dahl",
+  "https://openlibrary.org/authors/OL25712A/Terry_Pratchett"
 ]
 
 queries = ["the lord of the rings", "harry", "war"]
