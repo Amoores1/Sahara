@@ -1,0 +1,5 @@
+meta_product_name: "Sahara"
+meta_title: "Sahara - Connecting Book Lovers with Indpendent Booksellers"
+meta_description: "sahara connects readers with London's most iconic local bookshops. Buy your favourite book from anywhere and pick it up the same day."
+meta_image: "night_logo.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
