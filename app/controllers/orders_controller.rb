@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+
   def index
     @orders = Order.order('created_at DESC').all #where user = current-user
   end
